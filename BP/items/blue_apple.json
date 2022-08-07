@@ -1,0 +1,37 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bridge:blue_apple",
+			"category": "nature"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.crop"
+			},
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"on_consume": {
+					"event": "bridge:eaten"
+				},
+				"can_always_eat": true,
+				"nutrition": 5,
+				"saturation_modifier": "supernatural"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_blue_apple"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:foil": true
+		},
+		"events": {
+			"bridge:eaten": {
+				"run_command": {
+					"command": [
+						"effect @s night_vision 600 1 true"
+					]
+				}
+			}
+		}
+	}
+}

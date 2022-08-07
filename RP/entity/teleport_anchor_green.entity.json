@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "bridge:teleport_anchor_green",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/teleport_anchor_entity_green"
+			},
+			"geometry": {
+				"default": "geometry.teleport_anchor"
+			},
+			"render_controllers": [
+				"controller.render.generic"
+			]
+		}
+	}
+}

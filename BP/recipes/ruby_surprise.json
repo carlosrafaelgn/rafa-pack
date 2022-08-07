@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bridge:ruby_surprise"
+		},
+		"tags": ["crafting_table"],
+		"pattern": [
+			"AAA",
+			"BCD",
+			"AAA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:netherrack"
+			},
+			"B": {
+				"item": "minecraft:copper_block"
+			},
+			"C": {
+				"item": "bridge:ruby"
+			},
+			"D": {
+				"item": "minecraft:redstone_block"
+			}
+		},
+		"result": {
+			"item": "bridge:ruby_surprise"
+		}
+	}
+}

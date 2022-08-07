@@ -1,0 +1,53 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "bridge:ruby_surprise",
+			"category": "items"
+		},
+		"components": {
+			"tag:metal": {},
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "items"
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bridge_ruby_surprise_side",
+					"render_method": "opaque"
+				},
+				"up": {
+					"texture": "bridge_ruby_surprise_top",
+					"render_method": "opaque"
+				},
+				"down": {
+					"texture": "bridge_ruby_surprise_top",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:destroy_time": 5,
+			"minecraft:explosion_resistance": 5,
+			"minecraft:entity_collision": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 16]
+			},
+			"minecraft:pick_collision": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 16]
+			},
+			"minecraft:loot": "loot_tables/ruby_surprise.json",
+			"minecraft:on_player_destroyed": {
+				"event": "bridge:destroyed",
+				"target": "self"
+			}
+		},
+		"events": {
+			"bridge:destroyed": {
+				"set_block": {
+					"block_type": "bridge:ruby_surprise"
+				}
+			}
+		}
+	}
+}

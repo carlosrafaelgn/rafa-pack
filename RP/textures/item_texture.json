@@ -1,0 +1,102 @@
+{
+	"resource_pack_name": "Rafa Pack",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"bridge_bedrock_axe": {
+			"textures": "textures/items/bedrock_axe"
+		},
+		"bridge_bedrock_pickaxe": {
+			"textures": "textures/items/bedrock_pickaxe"
+		},
+		"bridge_bedrock_sword": {
+			"textures": "textures/items/bedrock_sword"
+		},
+		"bridge_blue_cake": {
+			"textures": "textures/items/blue_cake"
+		},
+		"bridge_bluestone": {
+			"textures": "textures/items/bluestone_dust"
+		},
+		"bridge_blue_apple": {
+			"textures": "textures/items/blue_apple"
+		},
+		"bridge_dream_axe": {
+			"textures": "textures/items/dream_axe"
+		},
+		"bridge_dream_pickaxe": {
+			"textures": "textures/items/dream_pickaxe"
+		},
+		"bridge_dream_sword": {
+			"textures": "textures/items/dream_sword"
+		},
+		"bridge_ruby": {
+			"textures": "textures/items/ruby"
+		},
+		"bridge_bedrock_hoe": {
+			"textures": "textures/items/bedrock_hoe"
+		},
+		"bridge_bedrock_shovel": {
+			"textures": "textures/items/bedrock_shovel"
+		},
+		"bridge_dream_shovel": {
+			"textures": "textures/items/dream_shovel"
+		},
+		"bridge_dream_hoe": {
+			"textures": "textures/items/dream_hoe"
+		},
+		"bridge_bedrock_helmet": {
+			"textures": "textures/items/bedrock_helmet"
+		},
+		"bridge_bedrock_chestplate": {
+			"textures": "textures/items/bedrock_chestplate"
+		},
+		"bridge_bedrock_leggings": {
+			"textures": "textures/items/bedrock_leggings"
+		},
+		"bridge_bedrock_boots": {
+			"textures": "textures/items/bedrock_boots"
+		},
+		"bridge_teleport_wand_black": {
+			"textures": "textures/items/teleport_wand_black"
+		},
+		"bridge_teleport_wand_blue": {
+			"textures": "textures/items/teleport_wand_blue"
+		},
+		"bridge_teleport_wand_green": {
+			"textures": "textures/items/teleport_wand_green"
+		},
+		"bridge_teleport_wand_red": {
+			"textures": "textures/items/teleport_wand_red"
+		},
+		"bridge_teleport_wand_white": {
+			"textures": "textures/items/teleport_wand_white"
+		},
+		"bridge_teleport_wand_yellow": {
+			"textures": "textures/items/teleport_wand_yellow"
+		},
+		"bridge_teleport_summon_wand_black": {
+			"textures": "textures/items/teleport_summon_wand_black"
+		},
+		"bridge_teleport_summon_wand_blue": {
+			"textures": "textures/items/teleport_summon_wand_blue"
+		},
+		"bridge_teleport_summon_wand_green": {
+			"textures": "textures/items/teleport_summon_wand_green"
+		},
+		"bridge_teleport_summon_wand_red": {
+			"textures": "textures/items/teleport_summon_wand_red"
+		},
+		"bridge_teleport_summon_wand_white": {
+			"textures": "textures/items/teleport_summon_wand_white"
+		},
+		"bridge_teleport_summon_wand_yellow": {
+			"textures": "textures/items/teleport_summon_wand_yellow"
+		},
+		"bridge_erasure_wand": {
+			"textures": "textures/items/erasure_wand"
+		},
+		"bridge_lightning_hammer": {
+			"textures": "textures/items/lightning_hammer"
+		}
+	}
+}

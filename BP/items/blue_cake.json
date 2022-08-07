@@ -1,0 +1,40 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bridge:blue_cake",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.miscFood"
+			},
+			"minecraft:use_duration": 1.6,
+			"minecraft:food": {
+				"on_consume": {
+					"event": "bridge:eaten"
+				},
+				"can_always_eat": true,
+				"nutrition": 20,
+				"saturation_modifier": "supernatural"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_blue_cake"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:foil": true
+		},
+		"events": {
+			"bridge:eaten": {
+				"run_command": {
+					"command": [
+						"effect @s health_boost 600 19 true",
+						"effect @s regeneration 600 4 true",
+						"effect @s haste 600 4 true",
+						"effect @s speed 600 2 true"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+[
+    {
+        "flipbook_texture": "textures/blocks/reactor_core_0",
+        "atlas_tile": "bridge_reactor_core_0",
+        "ticks_per_frame": 4
+    },
+    {
+        "flipbook_texture": "textures/blocks/reactor_core_1",
+        "atlas_tile": "bridge_reactor_core_1",
+        "ticks_per_frame": 4
+    },
+    {
+        "flipbook_texture": "textures/blocks/reactor_core_2",
+        "atlas_tile": "bridge_reactor_core_2",
+        "ticks_per_frame": 4
+    },
+    {
+        "flipbook_texture": "textures/blocks/reactor_core_3",
+        "atlas_tile": "bridge_reactor_core_3",
+        "ticks_per_frame": 4
+    },
+    {
+        "flipbook_texture": "textures/blocks/lava_transformer_0",
+        "atlas_tile": "bridge_lava_transformer_0",
+        "ticks_per_frame": 4
+    },
+    {
+        "flipbook_texture": "textures/blocks/lava_transformer_1",
+        "atlas_tile": "bridge_lava_transformer_1",
+        "ticks_per_frame": 4
+    },
+    {
+        "flipbook_texture": "textures/blocks/lava_transformer_2",
+        "atlas_tile": "bridge_lava_transformer_2",
+        "ticks_per_frame": 4
+    },
+    {
+        "flipbook_texture": "textures/blocks/lava_transformer_3",
+        "atlas_tile": "bridge_lava_transformer_3",
+        "ticks_per_frame": 4
+    },
+    {
+        "flipbook_texture": "textures/blocks/lava_transformer_4",
+        "atlas_tile": "bridge_lava_transformer_4",
+        "ticks_per_frame": 4
+    }
+]

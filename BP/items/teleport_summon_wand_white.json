@@ -1,0 +1,32 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bridge:teleport_summon_wand_white",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "equipment"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:allow_off_hand": true,
+			"minecraft:icon": {
+				"texture": "bridge_teleport_summon_wand_white"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "bridge:destroy_or_summon"
+				}
+			}
+		},
+		"events": {
+			"bridge:destroy_or_summon": {
+				"run_command": {
+					"command": "function teleport_summon_wand_white"
+				}
+			}
+		}
+	}
+}

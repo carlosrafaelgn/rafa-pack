@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bridge:reactor_core"
+		},
+		"tags": ["crafting_table"],
+		"pattern": [
+			"ABA",
+			"ABA",
+			"ABA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:iron_ingot"
+			},
+			"B": {
+				"item": "minecraft:diamond"
+			}
+		},
+		"result": {
+			"item": "bridge:reactor_core"
+		}
+	}
+}

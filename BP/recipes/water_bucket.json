@@ -1,0 +1,20 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bridge:water_bucket"
+		},
+        "tags": ["crafting_table"],
+		"ingredients": [
+			{
+				"item": "minecraft:water"
+			},
+			{
+				"item": "minecraft:bucket"
+			}
+		],
+		"result": {
+			"item": "minecraft:water_bucket"
+		}
+	}
+}

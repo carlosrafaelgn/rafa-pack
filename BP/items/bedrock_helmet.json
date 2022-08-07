@@ -1,0 +1,47 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bridge:bedrock_helmet",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "itemGroup.name.helmet"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:enchantable": {
+				"value": 9,
+				"slot": "armor_head"
+			},
+			"minecraft:durability": {
+				"max_durability": 999,
+				"damage_chance": {
+					"min": 0,
+					"max": 0
+				}
+			},
+			"minecraft:icon": {
+				"texture": "bridge_bedrock_helmet"
+			},
+			"minecraft:armor": {
+				"protection": 100000
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.head"
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [ "minecraft:bedrock" ],
+						"repair_amount": "query.max_durability * 0.25"
+					},
+					{
+						"items": [ "bridge:bedrock_helmet" ],
+						"repair_amount": "context.other->query.remaining_durability + 0.12 * context.other->query.max_durability"
+					}
+				]
+			}
+		}
+	}
+}

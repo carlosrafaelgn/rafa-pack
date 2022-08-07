@@ -1,0 +1,42 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Carlos Rafael Gimenes das Neves"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.2.13"
+			],
+			"dash": [
+				"0.8.18"
+			]
+		}
+	},
+	"header": {
+		"name": "Rafa Pack",
+		"description": "Rafa Pack",
+		"min_engine_version": [
+			1,
+			19,
+			11
+		],
+		"uuid": "479eb621-fa27-498a-a53c-742b4374ef0c",
+		"version": [
+			1,
+			0,
+			23
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "99026f26-f9d7-4ef1-bb67-a98c95e428b1",
+			"version": [
+				1,
+				0,
+				23
+			]
+		}
+	]
+}

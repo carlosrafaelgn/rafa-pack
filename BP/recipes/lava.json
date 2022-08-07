@@ -1,0 +1,22 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bridge:lava"
+		},
+		"tags": ["crafting_table"],
+		"ingredients": [
+			{
+				"item": "minecraft:lava_bucket"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:lava"
+			},
+			{
+				"item": "minecraft:bucket"
+			}
+		]
+	}
+}

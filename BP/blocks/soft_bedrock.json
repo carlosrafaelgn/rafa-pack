@@ -1,0 +1,33 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "bridge:soft_bedrock",
+			"category": "nature"
+		},
+		"components": {
+			"tag:stone": {},
+			"minecraft:creative_category": {
+				"category": "nature",
+				"group": "nature"
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bridge_soft_bedrock",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:destroy_time": 5,
+			"minecraft:explosion_resistance": 5,
+			"minecraft:entity_collision": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 16]
+			},
+			"minecraft:pick_collision": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 16]
+			}
+		}
+	}
+}

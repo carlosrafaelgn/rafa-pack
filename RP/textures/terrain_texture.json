@@ -1,0 +1,53 @@
+{
+	"resource_pack_name": "Rafa Pack",
+	"texture_name": "atlas.terrain",
+	"num_mip_levels": 0,
+	"padding": 0,
+	"texture_data": {
+		"bridge_reactor_core_0": {
+			"textures": "textures/blocks/reactor_core_0"
+		},
+		"bridge_reactor_core_1": {
+			"textures": "textures/blocks/reactor_core_1"
+		},
+		"bridge_reactor_core_2": {
+			"textures": "textures/blocks/reactor_core_2"
+		},
+		"bridge_reactor_core_3": {
+			"textures": "textures/blocks/reactor_core_3"
+		},
+		"bridge_ruby_surprise_side": {
+			"textures": "textures/blocks/ruby_surprise_side"
+		},
+		"bridge_ruby_surprise_top": {
+			"textures": "textures/blocks/ruby_surprise_top"
+		},
+		"bridge_soft_bedrock": {
+			"textures": "textures/blocks/soft_bedrock"
+		},
+		"bridge_ruby_ore": {
+			"textures": "textures/blocks/ruby_ore"
+		},
+		"bridge_disc_maker_side": {
+			"textures": "textures/blocks/disc_maker_side"
+		},
+		"bridge_disc_maker_top": {
+			"textures": "textures/blocks/disc_maker_top"
+		},
+		"bridge_lava_transformer_0": {
+			"textures": "textures/blocks/lava_transformer_0"
+		},
+		"bridge_lava_transformer_1": {
+			"textures": "textures/blocks/lava_transformer_1"
+		},
+		"bridge_lava_transformer_2": {
+			"textures": "textures/blocks/lava_transformer_2"
+		},
+		"bridge_lava_transformer_3": {
+			"textures": "textures/blocks/lava_transformer_3"
+		},
+		"bridge_lava_transformer_4": {
+			"textures": "textures/blocks/lava_transformer_4"
+		}
+	}
+}

@@ -1,0 +1,140 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "bridge:reactor_core",
+			"category": "items",
+			"properties": {
+				"bridge:count": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+				"bridge:running": [false, true]
+			}
+		},
+		"components": {
+			"tag:metal": {},
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "items"
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bridge_reactor_core_0",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:destroy_time": 5,
+			"minecraft:block_light_emission": 0,
+			"minecraft:explosion_resistance": 5,
+			"minecraft:entity_collision": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 16]
+			},
+			"minecraft:pick_collision": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 16]
+			},
+			"minecraft:loot": "loot_tables/reactor_core.json",
+			"minecraft:on_interact": {
+				// https://wiki.bedrock.dev/documentation/queries.html#query-get-equiped-item-name
+				// https://wiki.bedrock.dev/documentation/queries.html#query-is-item-name-any
+				//"condition": "query.get_equipped_item_name == 'diamond' && query.block_property('bridge:count') < 8",
+				"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:diamond') && query.block_property('bridge:count') < 8",
+				"event": "bridge:toggle"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:count') == 9",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "bridge_reactor_core_3",
+							"render_method": "opaque"
+						}
+					},
+					"minecraft:loot": "loot_tables/reactor_core_final.json",
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [4, 4],
+						"on_tick": {
+							"event": "bridge:final_tick"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:running') == true && query.block_property('bridge:count') == 8",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "bridge_reactor_core_2",
+							"render_method": "opaque"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [4, 4],
+						"on_tick": {
+							"event": "bridge:tick"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:running') == true && query.block_property('bridge:count') < 8",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "bridge_reactor_core_1",
+							"render_method": "opaque"
+						}
+					},
+					"minecraft:block_light_emission": 1,
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [4, 4],
+						"on_tick": {
+							"event": "bridge:tick"
+						}
+					}
+				}
+			}
+		],
+		"events": {
+			"bridge:tick": {
+				"spawn_loot": {
+					"table": "loot_tables/reactor_core_tick.json"
+				},
+				"set_block_property": {
+					"bridge:count": "query.block_property('bridge:count') + 1"
+				}
+			},
+			"bridge:final_tick": {
+				"run_command": {
+					"command": [
+						"damage @e[r=3] 5 block_explosion",
+
+						"fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air 0 destroy",
+
+						"particle minecraft:huge_explosion_emitter ~-1 ~ ~-1",
+						"particle minecraft:huge_explosion_emitter ~-1 ~ ~",
+						"particle minecraft:huge_explosion_emitter ~-1 ~ ~1",
+						"particle minecraft:huge_explosion_emitter ~ ~ ~-1",
+						"particle minecraft:huge_explosion_emitter ~ ~ ~",
+						"particle minecraft:huge_explosion_emitter ~ ~ ~1",
+						"particle minecraft:huge_explosion_emitter ~1 ~ ~-1",
+						"particle minecraft:huge_explosion_emitter ~1 ~ ~",
+						"particle minecraft:huge_explosion_emitter ~1 ~ ~1",
+
+						"playsound random.explode @a ~ ~ ~ 1 1 1"
+					]
+				}
+			},
+			"bridge:toggle": {
+				"set_block_property": {
+					"bridge:running": "(query.block_property('bridge:running') == true) ? false : true"
+				}
+			}
+		}
+	}
+}

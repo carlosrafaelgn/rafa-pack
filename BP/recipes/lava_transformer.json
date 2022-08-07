@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bridge:lava_transformer"
+		},
+		"tags": ["crafting_table"],
+		"pattern": [
+			"A",
+			"B",
+			"C"
+		],
+		"key": {
+			"A": {
+				"item": "bridge:bluestone"
+			},
+			"B": {
+				"item": "minecraft:sponge"
+			},
+			"C": {
+				"item": "minecraft:magma"
+			}
+		},
+		"result": {
+			"item": "bridge:lava_transformer"
+		}
+	}
+}

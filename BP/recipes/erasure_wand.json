@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bridge:erasure_wand"
+		},
+		"tags": ["crafting_table"],
+		"pattern": [
+			"BAB",
+			" B ",
+			" C "
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:lava"
+			},
+			"B": {
+				"item": "bridge:ruby"
+			},
+			"C": {
+				"item": "minecraft:iron_ingot"
+			}
+		},
+		"result": {
+			"item": "bridge:erasure_wand"
+		}
+	}
+}
