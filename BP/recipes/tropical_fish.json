@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:lava"
+			"identifier": "bridge:tropical_fish"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -10,12 +10,12 @@
 		],
 		"key": {
 			"A": {
-				"item": "minecraft:lava_bucket"
+				"item": "minecraft:tropical_fish_bucket"
 			}
 		},
 		"result": [
 			{
-				"item": "minecraft:lava"
+				"item": "minecraft:tropical_fish_spawn_egg"
 			},
 			{
 				"item": "minecraft:bucket"

@@ -1,15 +1,18 @@
 {
 	"format_version": "1.12",
-	"minecraft:recipe_shapeless": {
+	"minecraft:recipe_shaped": {
 		"description": {
 			"identifier": "bridge:fire"
 		},
 		"tags": ["crafting_table"],
-		"ingredients": [
-			{
+		"pattern": [
+			"A"
+		],
+		"key": {
+			"A": {
 				"item": "minecraft:flint_and_steel"
 			}
-		],
+		},
 		"result": [
 			{
 				"item": "minecraft:fire"

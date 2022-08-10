@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:lava"
+			"identifier": "bridge:pufferfish"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -10,12 +10,12 @@
 		],
 		"key": {
 			"A": {
-				"item": "minecraft:lava_bucket"
+				"item": "minecraft:pufferfish_bucket"
 			}
 		},
 		"result": [
 			{
-				"item": "minecraft:lava"
+				"item": "minecraft:pufferfish_spawn_egg"
 			},
 			{
 				"item": "minecraft:bucket"
