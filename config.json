@@ -5,7 +5,7 @@
 	"authors": [
 		"Carlos Rafael Gimenes das Neves"
 	],
-	"targetVersion": "1.19.0",
+	"targetVersion": "1.19.31",
 	"description": "Rafa Pack",
 	"experimentalGameplay": {
 		"cavesAndCliffs": true,
