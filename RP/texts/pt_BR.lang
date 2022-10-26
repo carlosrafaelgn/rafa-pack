@@ -71,6 +71,7 @@ teleport_anchor.yellow_summoned=Âncora de Teletransporte Amarela invocada
 tile.bridge:disc_maker.name=Criador de Discos
 tile.bridge:lava_transformer.name=Transformador de Lava
 tile.bridge:reactor_core.name=Núcleo do Reator do Nether Light
+tile.bridge:rocks.name=Rochas
 tile.bridge:ruby_ore.name=Minério de Rubi
 tile.bridge:ruby_surprise.name=Surpresa de Rubi
 tile.bridge:soft_bedrock.name=Rocha Matriz Suave

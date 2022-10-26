@@ -48,6 +48,9 @@
 		},
 		"bridge_lava_transformer_4": {
 			"textures": "textures/blocks/lava_transformer_4"
+		},
+		"bridge_rocks": {
+			"textures": "textures/blocks/rocks"
 		}
 	}
 }

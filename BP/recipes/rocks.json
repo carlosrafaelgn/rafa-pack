@@ -1,0 +1,20 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bridge:rocks"
+		},
+        "tags": ["crafting_table"],
+		"ingredients": [
+			{
+				"item": "minecraft:cobblestone"
+			},
+			{
+				"item": "minecraft:stick"
+			}
+		],
+		"result": {
+			"item": "bridge:rocks"
+		}
+	}
+}

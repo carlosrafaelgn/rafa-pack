@@ -71,6 +71,7 @@ teleport_anchor.yellow_summoned=Yellow Teleport Anchor summoned
 tile.bridge:disc_maker.name=Disc Maker
 tile.bridge:lava_transformer.name=Lava Transformer
 tile.bridge:reactor_core.name=Nether Reactor Core Light
+tile.bridge:rocks.name=Rocks
 tile.bridge:ruby_ore.name=Ruby Ore
 tile.bridge:ruby_surprise.name=Ruby Surprise
 tile.bridge:soft_bedrock.name=Soft Bedrock
