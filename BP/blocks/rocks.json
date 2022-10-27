@@ -30,10 +30,7 @@
 				"flame_odds": 0,
 				"burn_odds": 0
 			},
-			"minecraft:entity_collision": {
-				"origin": [-8, 0, -8],
-				"size": [16, 10, 16]
-			},
+			"minecraft:entity_collision": false,
 			"minecraft:pick_collision": {
 				"origin": [-8, 0, -8],
 				"size": [16, 10, 16]
