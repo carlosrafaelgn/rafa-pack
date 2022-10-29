@@ -1,5 +1,8 @@
 {
 	"bridge:rocks": {
 		"sound": "stone"
+	},
+	"bridge:sticker_album": {
+		"sound": "stone"
 	}
 }

@@ -51,6 +51,9 @@
 		},
 		"bridge_rocks": {
 			"textures": "textures/blocks/rocks"
+		},
+		"bridge_sticker_album": {
+			"textures": "textures/blocks/sticker_album"
 		}
 	}
 }

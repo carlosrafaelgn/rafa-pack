@@ -1,0 +1,32 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bridge:sticker_album"
+		},
+		"tags": ["crafting_table"],
+		"ingredients": [
+			{
+				"item": "minecraft:blue_dye"
+			},
+			{
+				"item": "minecraft:green_dye"
+			},
+			{
+				"item": "minecraft:yellow_dye"
+			},
+			{
+				"item": "minecraft:orange_dye"
+			},
+			{
+				"item": "minecraft:red_dye"
+			},
+			{
+				"item": "minecraft:book"
+			}
+		],
+		"result": {
+			"item": "bridge:sticker_album"
+		}
+	}
+}

@@ -1,0 +1,82 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "bridge:sticker_album",
+			"is_experimental": false,
+			"category": "equipment",
+			"properties": {
+				// https://wiki.bedrock.dev/blocks/rotatable-blocks.html
+				"bridge:rotation": [2, 3, 4, 5]
+			}
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "equipment"
+			},
+			"minecraft:geometry": "geometry.sticker_album",
+			"minecraft:material_instances": {
+				// https://wiki.bedrock.dev/blocks/troubleshooting-blocks.html#_3-2-0-block-has-shadow
+				"*": {
+					"texture": "bridge_sticker_album",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:block_light_emission": 0.0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:flammable": {
+				"flame_odds": 5,
+				"burn_odds": 20
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": {
+				"origin": [-6, 0, -7],
+				"size": [12, 1, 14]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": ["up"]
+					}
+				]
+			},
+			"minecraft:on_player_placing": {
+				"event": "bridge:set_rotation"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [0, 0, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:rotation') == 3",
+				"components": {
+					"minecraft:rotation": [0, 180, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:rotation') == 4",
+				"components": {
+					"minecraft:rotation": [0, 90, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:rotation') == 5",
+				"components": {
+					"minecraft:rotation": [0, 270, 0]
+				}
+			}
+		],
+		"events": {
+			"bridge:set_rotation": {
+				"set_block_property": {
+					"bridge:rotation": "(query.cardinal_facing_2d)"
+				}
+			}
+		}
+	}
+}
