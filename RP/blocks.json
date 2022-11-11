@@ -4,5 +4,8 @@
 	},
 	"bridge:sticker_album": {
 		"sound": "stone"
+	},
+	"bridge:pepper_bomb": {
+		"sound": "stone"
 	}
 }

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "bridge:fake_cobblestone",
+			"category": "construction"
+		},
+		"components": {
+			"tag:stone_pick_diggable": {},
+			"minecraft:creative_category": {
+				"category": "construction",
+				"group": "construction"
+			},
+			"minecraft:unit_cube": {},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bridge_fake_cobblestone",
+					"render_method": "double_sided"
+				}
+			},
+			"minecraft:destroy_time": 2,
+			"minecraft:unwalkable": true,
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": {
+				"origin": [-8, 0, -8],
+				"size": [16, 16, 16]
+			}
+		}
+	}
+}
