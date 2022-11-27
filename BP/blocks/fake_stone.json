@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:block": {
 		"description": {
-			"identifier": "bridge:fake_cobblestone",
+			"identifier": "bridge:fake_stone",
 			"category": "items"
 		},
 		"components": {
@@ -14,7 +14,7 @@
 			"minecraft:unit_cube": {},
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "bridge_fake_cobblestone",
+					"texture": "bridge_fake_stone",
 					"render_method": "double_sided"
 				}
 			},

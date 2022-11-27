@@ -114,6 +114,8 @@
 					"command": [
 						"damage @e[r=3] 5 block_explosion",
 
+						"setblock ~ ~ ~ air",
+
 						"fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air 0 destroy",
 
 						"particle minecraft:huge_explosion_emitter ~-1 ~ ~-1",

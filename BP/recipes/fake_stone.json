@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bridge:fake_stone"
+		},
+		"tags": ["crafting_table"],
+		"pattern": [
+			"AAA",
+			"ABA",
+			"AAA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:stone"
+			},
+			"B": {
+				// https://minecraft.fandom.com/wiki/Potion#Data_values
+				"item": "minecraft:potion",
+				"data": "7"
+			}
+		},
+		"result": {
+			"item": "bridge:fake_stone",
+			"count": 16
+		}
+	}
+}

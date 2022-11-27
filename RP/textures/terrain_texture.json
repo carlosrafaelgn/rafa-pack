@@ -58,8 +58,20 @@
 		"bridge_fake_cobblestone": {
 			"textures": "textures/blocks/fake_cobblestone"
 		},
+		"bridge_fake_dirt": {
+			"textures": "textures/blocks/fake_dirt"
+		},
+		"bridge_fake_stone": {
+			"textures": "textures/blocks/fake_stone"
+		},
 		"bridge_pepper_bomb": {
 			"textures": "textures/blocks/pepper_bomb"
+		},
+		"bridge_white": {
+			"textures": "textures/blocks/white"
+		},
+		"bridge_red": {
+			"textures": "textures/blocks/red"
 		}
 	}
 }

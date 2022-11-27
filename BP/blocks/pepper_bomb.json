@@ -7,7 +7,8 @@
 			"category": "items",
 			"properties": {
 				// https://wiki.bedrock.dev/blocks/rotatable-blocks.html
-				"bridge:rotation": [0, 1, 2, 3, 4, 5, 6]
+				"bridge:rotation": [0, 1, 2, 3, 4, 5, 6],
+				"bridge:count": [0, 1, 2, 3, 4, 5, 6, 7, 8]
 			}
 		},
 		"components": {
@@ -44,6 +45,13 @@
 			},
 			"minecraft:on_player_placing": {
 				"event": "bridge:set_rotation"
+			},
+			"minecraft:on_interact": {
+				// https://wiki.bedrock.dev/documentation/queries.html#query-get-equiped-item-name
+				// https://wiki.bedrock.dev/documentation/queries.html#query-is-item-name-any
+				//"condition": "query.get_equipped_item_name == 'flint_and_steel' && query.block_property('bridge:count') == 0",
+				"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:flint_and_steel') && query.block_property('bridge:count') == 0",
+				"event": "bridge:tick"
 			}
 		},
 		"permutations": [
@@ -62,7 +70,6 @@
 			{
 				"condition": "query.block_property('bridge:rotation') == 4",
 				"components": {
-					"minecraft:block_light_emission": 1.0,
 					"minecraft:rotation": [0, 0, 0]
 				}
 			},
@@ -71,12 +78,83 @@
 				"components": {
 					"minecraft:rotation": [0, 180, 0]
 				}
+			},
+			{
+				"condition": "math.mod(query.block_property('bridge:count'), 2) != 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "bridge_white",
+							"render_method": "opaque"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:count') > 0 && query.block_property('bridge:count') < 8",
+				"components": {
+					"minecraft:block_light_emission": 1.0,
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [1, 1],
+						"on_tick": {
+							"event": "bridge:tick"
+						}
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:count') == 8",
+				"components": {
+					"minecraft:block_light_emission": 1.0,
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "bridge_red",
+							"render_method": "opaque"
+						}
+					},
+					"minecraft:ticking": {
+						"looping": true,
+						"range": [2, 2],
+						"on_tick": {
+							"event": "bridge:final_tick"
+						}
+					}
+				}
 			}
 		],
 		"events": {
 			"bridge:set_rotation": {
 				"set_block_property": {
 					"bridge:rotation": "(query.block_face)"
+				}
+			},
+			"bridge:tick": {
+				"set_block_property": {
+					"bridge:count": "query.block_property('bridge:count') + 1"
+				}
+			},
+			"bridge:final_tick": {
+				"run_command": {
+					"command": [
+						"damage @e[r=8] 10 block_explosion",
+
+						"setblock ~ ~ ~ air",
+
+						"fill ~-8 ~-8 ~-8 ~8 ~8 ~8 air 0 destroy",
+
+						"particle minecraft:huge_explosion_emitter ~-1 ~ ~-1",
+						"particle minecraft:huge_explosion_emitter ~-1 ~ ~",
+						"particle minecraft:huge_explosion_emitter ~-1 ~ ~1",
+						"particle minecraft:huge_explosion_emitter ~ ~ ~-1",
+						"particle minecraft:huge_explosion_emitter ~ ~ ~",
+						"particle minecraft:huge_explosion_emitter ~ ~ ~1",
+						"particle minecraft:huge_explosion_emitter ~1 ~ ~-1",
+						"particle minecraft:huge_explosion_emitter ~1 ~ ~",
+						"particle minecraft:huge_explosion_emitter ~1 ~ ~1",
+
+						"playsound random.explode @a ~ ~ ~ 1 1 1"
+					]
 				}
 			}
 		}
