@@ -40,6 +40,7 @@
 			},
 			"minecraft:use_on": {
 				"blocks": [
+					"minecraft:dirt",
 					"minecraft:grass",
 					"minecraft:snow",
 					"minecraft:snow_layer"

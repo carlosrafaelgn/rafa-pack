@@ -1,0 +1,39 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bridge:sticker09",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"parent": "items"
+			},
+			"minecraft:icon": {
+				"texture": "bridge_sticker09"
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"position": [ 0.4, -0.15, -0.5 ],
+						"scale": [ 0.00390625, 0.00390625, 0.00390625 ]
+					},
+					"third_person": {
+						"position": [ 0, 0.75, 0 ],
+						"scale": [ 0.015625, 0.015625, 0.015625 ]
+					}
+				},
+				"off_hand": {
+					"first_person": {
+						"position": [ 0.4, -0.15, -0.5 ],
+						"scale": [ 0.00390625, 0.00390625, 0.00390625 ]
+					},
+					"third_person": {
+						"position": [ 0, 0.75, 0 ],
+						"scale": [ 0.015625, 0.015625, 0.015625 ]
+					}
+				}
+			}
+		}
+	}
+}

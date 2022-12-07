@@ -97,6 +97,36 @@
 		},
 		"bridge_lightning_hammer": {
 			"textures": "textures/items/lightning_hammer"
+		},
+		"bridge_sticker01": {
+			"textures": "textures/items/sticker01"
+		},
+		"bridge_sticker02": {
+			"textures": "textures/items/sticker02"
+		},
+		"bridge_sticker03": {
+			"textures": "textures/items/sticker03"
+		},
+		"bridge_sticker04": {
+			"textures": "textures/items/sticker04"
+		},
+		"bridge_sticker05": {
+			"textures": "textures/items/sticker05"
+		},
+		"bridge_sticker06": {
+			"textures": "textures/items/sticker06"
+		},
+		"bridge_sticker07": {
+			"textures": "textures/items/sticker07"
+		},
+		"bridge_sticker08": {
+			"textures": "textures/items/sticker08"
+		},
+		"bridge_sticker09": {
+			"textures": "textures/items/sticker09"
+		},
+		"bridge_sticker10": {
+			"textures": "textures/items/sticker10"
 		}
 	}
 }

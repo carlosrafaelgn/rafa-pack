@@ -19,13 +19,13 @@
 		"min_engine_version": [
 			1,
 			19,
-			31
+			50
 		],
 		"uuid": "479eb621-fa27-498a-a53c-742b4374ef0c",
 		"version": [
 			1,
 			0,
-			30
+			38
 		]
 	},
 	"modules": [
@@ -35,7 +35,7 @@
 			"version": [
 				1,
 				0,
-				30
+				38
 			]
 		}
 	]

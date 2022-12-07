@@ -1,0 +1,97 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "bridge:sticker_pack",
+			"is_experimental": false,
+			"category": "equipment",
+			"properties": {
+				// https://wiki.bedrock.dev/blocks/rotatable-blocks.html
+				"bridge:rotation": [2, 3, 4, 5]
+			}
+		},
+		"components": {
+			"minecraft:creative_category": {
+				"category": "equipment"
+			},
+			"minecraft:geometry": "geometry.sticker_pack",
+			"minecraft:material_instances": {
+				// https://wiki.bedrock.dev/blocks/troubleshooting-blocks.html#_3-2-0-block-has-shadow
+				"*": {
+					"texture": "bridge_sticker_pack",
+					"render_method": "opaque"
+				}
+			},
+			"minecraft:block_light_emission": 0.0,
+			"minecraft:block_light_absorption": 0,
+			"minecraft:destroy_time": 1,
+			"minecraft:flammable": {
+				"flame_odds": 5,
+				"burn_odds": 20
+			},
+			"minecraft:entity_collision": false,
+			"minecraft:pick_collision": {
+				"origin": [-3, 0, -4],
+				"size": [6, 1, 8]
+			},
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": ["up"]
+					}
+				]
+			},
+			"minecraft:on_player_placing": {
+				"event": "bridge:set_rotation"
+			},
+			"minecraft:on_interact": {
+				// https://wiki.bedrock.dev/documentation/queries.html#query-get-equiped-item-name
+				// https://wiki.bedrock.dev/documentation/queries.html#query-is-item-name-any
+				//"condition": "query.get_equipped_item_name == 'shears'",
+				"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:shears')",
+				"event": "bridge:open_pack"
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_property('bridge:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [0, 0, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:rotation') == 3",
+				"components": {
+					"minecraft:rotation": [0, 180, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:rotation') == 4",
+				"components": {
+					"minecraft:rotation": [0, 90, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:rotation') == 5",
+				"components": {
+					"minecraft:rotation": [0, 270, 0]
+				}
+			}
+		],
+		"events": {
+			"bridge:set_rotation": {
+				"set_block_property": {
+					"bridge:rotation": "(query.cardinal_facing_2d)"
+				}
+			},
+			"bridge:open_pack": {
+				"spawn_loot": {
+					"table": "loot_tables/sticker_pack.json"
+				},
+				"run_command": {
+					"command": "setblock ~ ~ ~ air"
+				}
+			}
+		}
+	}
+}

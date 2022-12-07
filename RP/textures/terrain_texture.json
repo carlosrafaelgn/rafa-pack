@@ -55,6 +55,9 @@
 		"bridge_sticker_album": {
 			"textures": "textures/blocks/sticker_album"
 		},
+		"bridge_sticker_pack": {
+			"textures": "textures/blocks/sticker_pack"
+		},
 		"bridge_fake_cobblestone": {
 			"textures": "textures/blocks/fake_cobblestone"
 		},

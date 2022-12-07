@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bridge:sticker_album"
+			"identifier": "bridge:sticker_pack"
 		},
 		"tags": ["crafting_table"],
 		"ingredients": [
@@ -22,11 +22,11 @@
 				"item": "minecraft:white_dye"
 			},
 			{
-				"item": "minecraft:book"
+				"item": "minecraft:paper"
 			}
 		],
 		"result": {
-			"item": "bridge:sticker_album"
+			"item": "bridge:sticker_pack"
 		}
 	}
 }
