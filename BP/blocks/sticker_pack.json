@@ -7,7 +7,8 @@
 			"category": "equipment",
 			"properties": {
 				// https://wiki.bedrock.dev/blocks/rotatable-blocks.html
-				"bridge:rotation": [2, 3, 4, 5]
+				"bridge:rotation": [0, 1, 2, 3, 4, 5, 6],
+				"bridge:vertical": [0, 1]
 			}
 		},
 		"components": {
@@ -24,7 +25,7 @@
 			},
 			"minecraft:block_light_emission": 0.0,
 			"minecraft:block_light_absorption": 0,
-			"minecraft:destroy_time": 1,
+			"minecraft:destroy_time": 0.2,
 			"minecraft:flammable": {
 				"flame_odds": 5,
 				"burn_odds": 20
@@ -37,7 +38,7 @@
 			"minecraft:placement_filter": {
 				"conditions": [
 					{
-						"allowed_faces": ["up"]
+						"allowed_faces": ["up", "north", "south", "west", "east"]
 					}
 				]
 			},
@@ -54,34 +55,77 @@
 		},
 		"permutations": [
 			{
-				"condition": "query.block_property('bridge:rotation') == 2",
+				"condition": "query.block_property('bridge:vertical') == 0 && query.block_property('bridge:rotation') == 2",
 				"components": {
 					"minecraft:rotation": [0, 0, 0]
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:rotation') == 3",
+				"condition": "query.block_property('bridge:vertical') == 0 && query.block_property('bridge:rotation') == 3",
 				"components": {
 					"minecraft:rotation": [0, 180, 0]
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:rotation') == 4",
+				"condition": "query.block_property('bridge:vertical') == 0 && query.block_property('bridge:rotation') == 4",
 				"components": {
 					"minecraft:rotation": [0, 90, 0]
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:rotation') == 5",
+				"condition": "query.block_property('bridge:vertical') == 0 && query.block_property('bridge:rotation') == 5",
 				"components": {
 					"minecraft:rotation": [0, 270, 0]
+				}
+			},
+
+			// Vertical
+
+			{
+				"condition": "query.block_property('bridge:vertical') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.sticker_pack_v",
+					"minecraft:pick_collision": {
+						"origin": [-8, 4, -3],
+						"size": [1, 8, 6]
+					}
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 2",
+				"components": {
+					"minecraft:rotation": [0, 270, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 3",
+				"components": {
+					"minecraft:rotation": [0, 90, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 4",
+				"components": {
+					"minecraft:rotation": [0, 0, 0]
+				}
+			},
+			{
+				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 5",
+				"components": {
+					"minecraft:rotation": [0, 180, 0]
 				}
 			}
 		],
 		"events": {
 			"bridge:set_rotation": {
 				"set_block_property": {
-					"bridge:rotation": "(query.cardinal_facing_2d)"
+					// query.block_face	Returns the block face for this (only valid for certain triggers such
+					// as placing blocks, or interacting with block)
+					// (Down=0.0, Up=1.0, North=2.0, South=3.0, West=4.0, East=5.0, Undefined=6.0).
+					// query.cardinal_facing_2d	Returns the current facing of the player ignoring up/down part
+					// of the direction (North=2.0, South=3.0, West=4.0, East=5.0, Undefined=6.0).
+					"bridge:rotation": "(query.block_face == 1 ? query.cardinal_facing_2d : query.block_face)",
+					"bridge:vertical": "(query.block_face == 1 ? 0 : 1)"
 				}
 			},
 			"bridge:open_pack": {
