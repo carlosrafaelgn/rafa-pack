@@ -55,6 +55,9 @@
 		"bridge_sticker_album": {
 			"textures": "textures/blocks/sticker_album"
 		},
+		"bridge_sticker_album_golden": {
+			"textures": "textures/blocks/sticker_album_golden"
+		},
 		"bridge_sticker_pack": {
 			"textures": "textures/blocks/sticker_pack"
 		},

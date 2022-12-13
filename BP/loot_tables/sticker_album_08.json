@@ -1,0 +1,58 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{ "type": "item", "name": "bridge:sticker_album" }
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{ "type": "item", "name": "bridge:sticker01" }
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{ "type": "item", "name": "bridge:sticker02" }
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{ "type": "item", "name": "bridge:sticker03" }
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{ "type": "item", "name": "bridge:sticker04" }
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{ "type": "item", "name": "bridge:sticker05" }
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{ "type": "item", "name": "bridge:sticker06" }
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{ "type": "item", "name": "bridge:sticker07" }
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{ "type": "item", "name": "bridge:sticker08" }
+			]
+		}
+	]
+}

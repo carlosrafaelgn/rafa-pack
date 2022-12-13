@@ -45,6 +45,9 @@
 			}
 		},
 		"events": {
+			// @@@ BUG!!!
+			// Item event response 'run_command' with '/clear' or '/replaceitem' does not change held item
+			// https://bugs.mojang.com/browse/MCPE-163988
 			"bridge:generate": {
 				"spawn_loot": {
 					"table": "loot_tables/disc_maker.json"
