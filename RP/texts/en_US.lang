@@ -1,3 +1,4 @@
+clickable_cookie.click=§9C§bl§ai§ec§6k§c!§d!§f!
 entity.bridge:marker.name=Marker
 entity.bridge:teleport_anchor_black.name=Black Teleport Anchor
 entity.bridge:teleport_anchor_blue.name=Blue Teleport Anchor
@@ -90,6 +91,7 @@ teleport_anchor.yellow_destroyed=Yellow Teleport Anchor destroyed
 teleport_anchor.yellow_far_away=Yellow Teleport Anchor is too far away to be destroyed
 teleport_anchor.yellow_not_found=Yellow Teleport Anchor not found
 teleport_anchor.yellow_summoned=Yellow Teleport Anchor summoned
+tile.bridge:clickable_cookie.name=Clickable Cookie
 tile.bridge:disc_maker.name=Disc Maker
 tile.bridge:fake_cobblestone.name=Fake Cobblestone
 tile.bridge:fake_dirt.name=Fake Dirt

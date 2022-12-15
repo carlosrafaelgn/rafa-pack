@@ -1,3 +1,4 @@
+clickable_cookie.click=§9C§bl§ai§ec§6k§c!§d!§f!
 entity.bridge:marker.name=Marcador
 entity.bridge:teleport_anchor_black.name=Âncora de Teletransporte Preta
 entity.bridge:teleport_anchor_blue.name=Âncora de Teletransporte Azul
@@ -90,6 +91,7 @@ teleport_anchor.yellow_destroyed=Âncora de Teletransporte Amarela destruída
 teleport_anchor.yellow_far_away=Âncora de Teletransporte Amarela está muito longe para ser destruída
 teleport_anchor.yellow_not_found=Âncora de Teletransporte Amarela não encontrada
 teleport_anchor.yellow_summoned=Âncora de Teletransporte Amarela invocada
+tile.bridge:clickable_cookie.name=Cookie Clicável
 tile.bridge:disc_maker.name=Criador de Discos
 tile.bridge:fake_cobblestone.name=Pedregulho Falso
 tile.bridge:fake_dirt.name=Terra Falsa

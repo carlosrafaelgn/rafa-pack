@@ -78,6 +78,9 @@
 		},
 		"bridge_red": {
 			"textures": "textures/blocks/red"
+		},
+		"bridge_clickable_cookie": {
+			"textures": "textures/blocks/clickable_cookie"
 		}
 	}
 }
