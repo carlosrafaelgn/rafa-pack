@@ -80,37 +80,27 @@
 			// Vertical
 
 			{
-				"condition": "query.block_property('bridge:vertical') == 1",
-				"components": {
-					"minecraft:geometry": "geometry.sticker_album_v",
-					"minecraft:pick_collision": {
-						"origin": [-8, 1, -6],
-						"size": [1, 14, 12]
-					}
-				}
-			},
-			{
 				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 2",
 				"components": {
-					"minecraft:rotation": [0, 270, 0]
+					"minecraft:rotation": [90, 180, 0]
 				}
 			},
 			{
 				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 3",
 				"components": {
-					"minecraft:rotation": [0, 90, 0]
+					"minecraft:rotation": [90, 0, 0]
 				}
 			},
 			{
 				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 4",
 				"components": {
-					"minecraft:rotation": [0, 0, 0]
+					"minecraft:rotation": [90, -90, 0]
 				}
 			},
 			{
 				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 5",
 				"components": {
-					"minecraft:rotation": [0, 180, 0]
+					"minecraft:rotation": [90, 90, 0]
 				}
 			},
 
