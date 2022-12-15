@@ -797,12 +797,20 @@
 { "block": "minecraft:soul_sand", "speed": 5, "on_dig": { "event": "bridge:durability", "target": "self" } },
 { "block": "minecraft:tuff", "speed": 15, "on_dig": { "event": "bridge:durability", "target": "self" } },
 
+{ "block": "bridge:clickable_cookie", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } },
 { "block": "bridge:disc_maker", "speed": 15, "on_dig": { "event": "bridge:durability", "target": "self" } },
+{ "block": "bridge:fake_cobblestone", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } },
+{ "block": "bridge:fake_dirt", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } },
+{ "block": "bridge:fake_stone", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } },
 { "block": "bridge:lava_transformer", "speed": 15, "on_dig": { "event": "bridge:durability", "target": "self" } },
+{ "block": "bridge:pepper_bomb", "speed": 15, "on_dig": { "event": "bridge:durability", "target": "self" } },
 { "block": "bridge:reactor_core", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } },
+{ "block": "bridge:rocks", "speed": 15, "on_dig": { "event": "bridge:durability", "target": "self" } },
 { "block": "bridge:ruby_ore", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } },
 { "block": "bridge:ruby_surprise", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } },
-{ "block": "bridge:soft_bedrock", "speed": 15, "on_dig": { "event": "bridge:durability", "target": "self" } }
+{ "block": "bridge:soft_bedrock", "speed": 15, "on_dig": { "event": "bridge:durability", "target": "self" } },
+{ "block": "bridge:sticker_album", "speed": 15, "on_dig": { "event": "bridge:durability", "target": "self" } },
+{ "block": "bridge:sticker_pack", "speed": 15, "on_dig": { "event": "bridge:durability", "target": "self" } }
 
 				]
 			},
