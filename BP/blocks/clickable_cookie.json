@@ -8,7 +8,9 @@
 			"properties": {
 				// https://wiki.bedrock.dev/blocks/rotatable-blocks.html
 				"bridge:rotation": [0, 1, 2, 3, 4, 5, 6],
-				"bridge:vertical": [0, 1]
+				"bridge:vertical": [0, 1],
+				"bridge:prize": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+				"bridge:turn": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 			}
 		},
 		"components": {
@@ -120,9 +122,119 @@
 				}
 			},
 			"bridge:click": {
-				"run_command": {
-					"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"clickable_cookie.click\"}]}"
-				}
+				"sequence": [
+					{
+						"run_command": {
+							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"clickable_cookie.click\"}]}"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') < 9",
+						"set_block_property": {
+							"bridge:turn": "query.block_property('bridge:turn') + 1"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') == 9 && query.block_property('bridge:prize') == 0",
+						"set_block_property": {
+							"bridge:turn": "0",
+							"bridge:prize": "math.mod(query.block_property('bridge:prize') + 1, 10)"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clickable_cookie_00.json"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') == 9 && query.block_property('bridge:prize') == 1",
+						"set_block_property": {
+							"bridge:turn": "0",
+							"bridge:prize": "math.mod(query.block_property('bridge:prize') + 1, 10)"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clickable_cookie_01.json"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') == 9 && query.block_property('bridge:prize') == 2",
+						"set_block_property": {
+							"bridge:turn": "0",
+							"bridge:prize": "math.mod(query.block_property('bridge:prize') + 1, 10)"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clickable_cookie_02.json"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') == 9 && query.block_property('bridge:prize') == 3",
+						"set_block_property": {
+							"bridge:turn": "0",
+							"bridge:prize": "math.mod(query.block_property('bridge:prize') + 1, 10)"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clickable_cookie_03.json"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') == 9 && query.block_property('bridge:prize') == 4",
+						"set_block_property": {
+							"bridge:turn": "0",
+							"bridge:prize": "math.mod(query.block_property('bridge:prize') + 1, 10)"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clickable_cookie_04.json"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') == 9 && query.block_property('bridge:prize') == 5",
+						"set_block_property": {
+							"bridge:turn": "0",
+							"bridge:prize": "math.mod(query.block_property('bridge:prize') + 1, 10)"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clickable_cookie_05.json"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') == 9 && query.block_property('bridge:prize') == 6",
+						"set_block_property": {
+							"bridge:turn": "0",
+							"bridge:prize": "math.mod(query.block_property('bridge:prize') + 1, 10)"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clickable_cookie_06.json"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') == 9 && query.block_property('bridge:prize') == 7",
+						"set_block_property": {
+							"bridge:turn": "0",
+							"bridge:prize": "math.mod(query.block_property('bridge:prize') + 1, 10)"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clickable_cookie_07.json"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') == 9 && query.block_property('bridge:prize') == 8",
+						"set_block_property": {
+							"bridge:turn": "0",
+							"bridge:prize": "math.mod(query.block_property('bridge:prize') + 1, 10)"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clickable_cookie_08.json"
+						}
+					},
+					{
+						"condition": "query.block_property('bridge:turn') == 9 && query.block_property('bridge:prize') == 9",
+						"set_block_property": {
+							"bridge:turn": "0",
+							"bridge:prize": "math.mod(query.block_property('bridge:prize') + 1, 10)"
+						},
+						"spawn_loot": {
+							"table": "loot_tables/clickable_cookie_09.json"
+						}
+					}
+				]
 			}
 		}
 	}
