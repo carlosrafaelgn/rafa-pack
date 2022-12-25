@@ -3,7 +3,7 @@
 	"minecraft:block": {
 		"description": {
 			"identifier": "bridge:lava_transformer",
-			"category": "nature",
+			"category": "items",
 			"properties": {
 				"bridge:count": [0, 1, 2, 3, 4]
 			}
@@ -11,8 +11,8 @@
 		"components": {
 			"tag:stone": {},
 			"minecraft:creative_category": {
-				"category": "nature",
-				"group": "nature"
+				"category": "items",
+				"group": "items"
 			},
 			"minecraft:unit_cube": {},
 			"minecraft:material_instances": {

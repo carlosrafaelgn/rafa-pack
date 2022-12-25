@@ -1,0 +1,22 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bridge:unfinished_ruby"
+		},
+		"tags": ["crafting_table"],
+		"pattern": [
+			" A ",
+			"A A",
+			" A "
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:redstone"
+			}
+		},
+		"result": {
+			"item": "bridge:unfinished_ruby"
+		}
+	}
+}

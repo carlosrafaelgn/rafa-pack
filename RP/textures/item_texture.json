@@ -32,6 +32,12 @@
 		"bridge_ruby": {
 			"textures": "textures/items/ruby"
 		},
+		"bridge_unfinished_emerald": {
+			"textures": "textures/items/unfinished_emerald"
+		},
+		"bridge_unfinished_ruby": {
+			"textures": "textures/items/unfinished_ruby"
+		},
 		"bridge_bedrock_hoe": {
 			"textures": "textures/items/bedrock_hoe"
 		},

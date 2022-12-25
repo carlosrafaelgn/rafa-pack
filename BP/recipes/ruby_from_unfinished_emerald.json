@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bridge:ruby_from_unfinished_emerald"
+		},
+		"tags": ["crafting_table"],
+		"pattern": [
+			"A"
+		],
+		"key": {
+			"A": {
+				"item": "bridge:unfinished_emerald"
+			}
+		},
+		"result": [
+			{
+				"item": "bridge:ruby"
+			},
+			{
+				"item": "minecraft:green_dye"
+			}
+		]
+	}
+}

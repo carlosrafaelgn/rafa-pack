@@ -3,8 +3,7 @@
 	"minecraft:block": {
 		"description": {
 			"identifier": "bridge:sticker_pack",
-			"is_experimental": false,
-			"category": "equipment",
+			"category": "items",
 			"properties": {
 				// https://wiki.bedrock.dev/blocks/rotatable-blocks.html
 				"bridge:rotation": [0, 1, 2, 3, 4, 5, 6],
@@ -13,7 +12,8 @@
 		},
 		"components": {
 			"minecraft:creative_category": {
-				"category": "equipment"
+				"category": "items",
+				"group": "items"
 			},
 			"minecraft:geometry": "geometry.sticker_pack",
 			"minecraft:material_instances": {
