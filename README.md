@@ -49,17 +49,17 @@ My son asked for something with more color... Therefore, we created the tools be
 
 ## Bluestone
 
-Combining `Redstone Dust` with either `Blue Dye` or `Lapis Lazuli` produces `Bluestone Dust`. This dust can be combined with `Apple` or with `Cake` to produce `Blue Apple` and `Blue Cake`, respectively. These two items are unvaluable food sources with a bunch of cool side effects!!! 💖
+Combining `Redstone Dust` with either `Blue Dye` or `Lapis Lazuli` produces `Bluestone Dust`. This dust can be combined with `Apple` or with `Cake` to produce `Blue Apple` and `Blue Cake`, respectively. These two items are invaluable food sources with a bunch of cool side effects!!! 💖
 
 ## Teleportation
 
-Even in creative mode, it is a lot consuming sometimes to get from one location to another. To help with that, we created six special teleport wands: black, blue, green, red, white and yellow.
+Even in creative mode, it can be really time consuming to get from one location to another sometimes. To help with that, we created six special teleport wands: black, blue, green, red, white and yellow.
 
 `XXX Teleport Anchor Summon Wand`s, when used, create a special totem where you can teleport to later, using a `XXX Teleport Wand`.
 
 If a `XXX Teleport Wand` is used when its related totem is still not created, a warning message appears.
 
-Using a `XXX Teleport Anchor Summon Wand` more than 10 blocks away from an existing totem displays a warning message. On the other hand, if you are less than 10 blocks away from an existing totem when using a `XXX Teleport Anchor Summon Wand`, the existing totem is destroyed. **Beware** not to destroy the totem while being too close to it, because a lighting strikes the totem when it is destroyed. 😅
+Using a `XXX Teleport Anchor Summon Wand` more than 10 blocks away from an existing totem displays a warning message. On the other hand, if you are less than 10 blocks away from an existing totem when using a `XXX Teleport Anchor Summon Wand`, the existing totem is destroyed. **Beware** not to destroy the totem while being too close to it, because a lightning strikes the totem when it is destroyed. 😅
 
 `XXX Teleport Wand`s can teleport you even between dimensions! 💖
 
@@ -119,15 +119,15 @@ We have always found it very difficult to obtain discs. That is why we created t
 ```
 Crafting table:
 
-ACA
 ABA
+ACA
 AAA
 
 Where:
 
 A = Iron Ingot
-B = Note Block
-C = Redtone Dust
+B = Redtone Dust
+C = Note Block
 ```
 
 Once the `Disc Maker` is placed somewhere, a random disc is produced when you interact with the block while holding `Coal`.
@@ -136,7 +136,7 @@ Once the `Disc Maker` is placed somewhere, a random disc is produced when you in
 
 There is a famous online game where all you do is clicking a cookie to produce more cookies! We both love that game so much that we bought a [version of it](https://store.steampowered.com/app/1454400/Cookie_Clicker/) just because of its soundtrack! 😅
 
-That is why we created the `Clickable Cookie`, to quench that thirst for clicking and getting items in return!
+That is why we created the `Clickable Cookie`: to quench that thirst for clicking (and getting a few items in return at the same time 😁)!
 
 ```
 Crafting table:
@@ -159,7 +159,7 @@ Gathering all items necessary to get to "The End" can be extremely time consumin
 
 Add to that the fact my son has been fascinated by the [Nether Reactor](https://minecraft.fandom.com/wiki/Nether_reactor) ever since he first saw it in an online video.
 
-Therefore, I thought it would be a great idea to create the `Nether Reactor Core Light`, a block that produces all the items necessary to travel to "The End". 😅
+Therefore, I thought it would be a great idea to create the `Nether Reactor Core Light`, a block that produces all the items necessary to travel to "The End", without all the hassle of venturing to the Nether. 😅
 
 ```
 Crafting table:
@@ -180,7 +180,7 @@ The block can be deactivate by a `Diamond`, halting the item production and the 
 
 ## Stickers Packs and Sticker Album
 
-Just as a lot of people here in Brazil, my son became obsessed with this year's world cup stickers. ⚽ That's why he asked me a million times to do something like that in the game. 😅
+Just as a lot of people here in Brazil, my son became obsessed with this year's world cup stickers. ⚽ That is why he asked me a million times to do something like that in the game. 😅
 
 That led us to the creation of two new blocks: `Sticker Album` and `Sticker Pack`.
 
@@ -190,11 +190,13 @@ The `Sticker Pack`'s recipe is almost the same as the `Sticker Album`'s, only re
 
 Once placed, you can use `Shears` to open a `Sticker Pack` and obtain 3 random stickers.
 
-Stick all the stickers on the album, in order, to make the album shine! 😊
+Stick all the stickers on the album, from `Sticker 01` to `Sticker 10` in ascending order, to make the album shine! 😊
+
+Should it become a little too difficult to get a specific sticker, try talking to a librarian... 😉
 
 ## Lightning Hammer
 
-The `Lightning Hammer` will cause a lightning to strike the nearest monster in a range of 10 blocks. If there are no monsters in that range, a lightning will strike the block extactly 5 blocks in front of you.
+The `Lightning Hammer` will cause a lightning to strike the nearest monster in a range of 10 blocks. If there are no monsters in that range, a lightning will strike the block exactly 5 blocks in front of you.
 
 ```
 Crafting table:
@@ -293,7 +295,7 @@ C = Block of Redstone
 
 ## Emerald and Ruby
 
-When my son found out about the removed/never released `Ruby` item, he went crazy with the idea of actually bringing it into the game. 😅 That way, I created a new ore, the `Ruby Ore`, and made it be placed on the overworld alongside regular stone.
+When my son found out about the removed/never-released `Ruby` item, he went crazy with the idea of actually bringing it into the game. 😅 That way, I created a new ore, the `Ruby Ore`, and made it be placed on the overworld alongside regular stone.
 
 One `Ruby` produces four `Redstone Dust`. Combining four `Redstone Dust` in a shape like the one below, produces an `Unfinished Ruby`, which can be smelted to produce one `Ruby`. One `Unfinished Ruby` also produces four `Redstone Dust`.
 
@@ -313,7 +315,7 @@ Combining one `Ruby` with one `Green Dye` produces one `Unfinished Emerald`, whi
 
 ## Missing Horse Armors
 
-My son asked me for a way to craft the missing horse armors (iron, golden and diamond). So here are their recipes:
+My son asked me for a way to craft the missing horse armors (iron, golden and diamond). Therefore, here are their recipes:
 
 ```
 Crafting table:
@@ -334,7 +336,7 @@ Combining one `Cobblestone` with one `Stick` produces a rustic piece of decorati
 
 ## Buckets
 
-Place one these buckets into a crafting table (or into a regular crafting slot) to extract the contents from the buckets (combining the contents with empty buckets produces the original bucket back):
+Place one these buckets into a crafting table (or into a regular crafting slot) to extract their contents. Combining the contents with empty buckets produces the original bucket back:
 
 - `Bucket of Axolotl`
 - `Bucket of Cod`
@@ -360,7 +362,7 @@ Overall, after a lot of research, I realized these are the best references to go
 - https://minecraftitemids.com/
 - https://wiki.bedrock.dev/
 
-Also, it is worthy checking https://bugs.mojang.com due to a few known Minecraft bugs that can affect custom items and blocks, like [this bug](https://bugs.mojang.com/browse/MCPE-163988) that intefered with a couple of my own blocks. 😅
+Also, it is worthy checking https://bugs.mojang.com due to a few known Minecraft bugs that can affect custom items and blocks, like [this bug](https://bugs.mojang.com/browse/MCPE-163988) that interfered with a couple of my own blocks. 😅
 
 In my case, I found these specific links to be very helpful:
 
@@ -394,6 +396,7 @@ In my case, I found these specific links to be very helpful:
 - https://minecraft.fandom.com/wiki/Speed
 - https://minecraft.fandom.com/wiki/Target_selectors
 - https://minecraft.fandom.com/wiki/Commands/damage
+- https://minecraft.fandom.com/wiki/Commands/execute
 - https://minecraft.fandom.com/wiki/Commands/playsound
 - https://minecraft.fandom.com/wiki/Sounds.json#Bedrock_Edition_values
 - https://minecraft.fandom.com/wiki/Particles
@@ -429,7 +432,7 @@ These are the three main apps I use to create our add-on:
 - https://www.gimp.org/
 - https://web.blockbench.net/
 
-Also, it is extremely useful to have Minecraft's vanilla packs in hand for reference:
+In addition, it is extremely useful to have Minecraft's vanilla packs in hand for reference:
 
 - https://aka.ms/behaviorpacktemplate
 - https://aka.ms/resourcepacktemplate
