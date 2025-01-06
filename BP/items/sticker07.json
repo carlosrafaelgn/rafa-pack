@@ -9,7 +9,7 @@
 		},
 		"components": {
 			"minecraft:icon": "rafapack_sticker07",
-			"minecraft:interact_button": true
+			//"minecraft:interact_button": true
 			// https://wiki.bedrock.dev/items/high-resolution-items.html
 		}
 	}
