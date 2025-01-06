@@ -1,160 +1,116 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "bridge:lava_transformer",
-			"category": "items",
-			"properties": {
-				"bridge:count": [0, 1, 2, 3, 4]
+			"identifier": "rafapack:lava_transformer",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"rafapack:count": [0, 1, 2, 3, 4]
 			}
 		},
 		"components": {
-			"tag:stone": {},
-			"minecraft:creative_category": {
-				"category": "items",
-				"group": "items"
-			},
-			"minecraft:unit_cube": {},
+			"tag:diamond_pick_diggable": {},
+			"minecraft:geometry": "minecraft:geometry.full_block",
 			"minecraft:material_instances": {
 				"*": {
-					"texture": "bridge_lava_transformer_0",
+					"texture": "rafapack_lava_transformer_0",
 					"render_method": "opaque"
 				}
 			},
-			"minecraft:destroy_time": 2,
-			"minecraft:block_light_emission": 1,
-			"minecraft:explosion_resistance": 5,
-			"minecraft:entity_collision": {
-				"origin": [-8, 0, -8],
-				"size": [16, 16, 16]
+			"minecraft:custom_components": [
+				"rafapack:lava_transformer_behavior"
+			],
+			"minecraft:light_emission": 15,
+			"minecraft:light_dampening": 0,
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 5,
+				// https://bugs.mojang.com/browse/MCPE-188401
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:diamond_tier')"
+						},
+						"destroy_speed": 3
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:netherite_tier')"
+						},
+						"destroy_speed": 2
+					}
+					/*
+					{
+						"item": "minecraft:diamond_pickaxe",
+						"destroy_speed": 3
+					},
+					{
+						"item": "minecraft:netherite_pickaxe",
+						"destroy_speed": 2
+					}
+					*/
+				]
 			},
-			"minecraft:pick_collision": {
-				"origin": [-8, 0, -8],
-				"size": [16, 16, 16]
-			},
-			"minecraft:on_interact": {
-				// https://wiki.bedrock.dev/documentation/queries.html#query-get-equiped-item-name
-				// https://wiki.bedrock.dev/documentation/queries.html#query-is-item-name-any
-				//"condition": "query.get_equipped_item_name == 'diamond'",
-				"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:diamond')",
-				"event": "bridge:restart"
+			"minecraft:flammable": false,
+			"minecraft:loot": "loot_tables/lava_transformer.json",
+			"minecraft:tick": {
+				// https://wiki.bedrock.dev/blocks/block-components.html#tick
+				"interval_range": [80, 80],
+				"looping": true
 			}
 		},
 		"permutations": [
 			{
-				"condition": "query.block_property('bridge:count') == 4",
+				"condition": "q.block_state('rafapack:count') == 1",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "bridge_lava_transformer_4",
+							"texture": "rafapack_lava_transformer_1",
 							"render_method": "opaque"
 						}
 					},
-					"minecraft:ticking": {
-						"looping": true,
-						"range": [4, 4],
-						"on_tick": {
-							"event": "bridge:tick4"
-						}
-					}
+					"minecraft:light_emission": 12
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:count') == 3",
+				"condition": "q.block_state('rafapack:count') == 2",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "bridge_lava_transformer_3",
+							"texture": "rafapack_lava_transformer_2",
 							"render_method": "opaque"
 						}
 					},
-					"minecraft:ticking": {
-						"looping": true,
-						"range": [4, 4],
-						"on_tick": {
-							"event": "bridge:tick3"
-						}
-					}
+					"minecraft:light_emission": 9
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:count') == 2",
+				"condition": "q.block_state('rafapack:count') == 3",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "bridge_lava_transformer_2",
+							"texture": "rafapack_lava_transformer_3",
 							"render_method": "opaque"
 						}
 					},
-					"minecraft:ticking": {
-						"looping": true,
-						"range": [4, 4],
-						"on_tick": {
-							"event": "bridge:tick2"
-						}
-					}
+					"minecraft:light_emission": 6
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:count') == 1",
+				"condition": "q.block_state('rafapack:count') == 4",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "bridge_lava_transformer_1",
+							"texture": "rafapack_lava_transformer_4",
 							"render_method": "opaque"
 						}
 					},
-					"minecraft:ticking": {
-						"looping": true,
-						"range": [4, 4],
-						"on_tick": {
-							"event": "bridge:tick1"
-						}
-					}
+					"minecraft:light_emission": 3,
+					"minecraft:loot": "loot_tables/reactor_core_final.json"
 				}
 			}
-		],
-		"events": {
-			"bridge:restart": {
-				"set_block_property": {
-					"bridge:count": "4"
-				}
-			},
-			"bridge:tick4": {
-				"set_block_property": {
-					"bridge:count": "3"
-				},
-				"run_command": {
-					"command": [
-						"fill ~-1 ~-1 ~-1 ~1 ~1 ~1 diamond_block 0 replace lava"
-					]
-				}
-			},
-			"bridge:tick3": {
-				"set_block_property": {
-					"bridge:count": "2"
-				},
-				"run_command": {
-					"command": [
-						"fill ~-2 ~-2 ~-2 ~2 ~2 ~2 diamond_block 0 replace lava"
-					]
-				}
-			},
-			"bridge:tick2": {
-				"set_block_property": {
-					"bridge:count": "1"
-				},
-				"run_command": {
-					"command": [
-						"fill ~-3 ~-3 ~-3 ~3 ~3 ~3 diamond_block 0 replace lava"
-					]
-				}
-			},
-			"bridge:tick1": {
-				"set_block_property": {
-					"bridge:count": "0"
-				}
-			}
-		}
+		]
 	}
 }

@@ -2,137 +2,137 @@
 	"resource_pack_name": "Rafa Pack",
 	"texture_name": "atlas.items",
 	"texture_data": {
-		"bridge_bedrock_axe": {
+		"rafapack_bedrock_axe": {
 			"textures": "textures/items/bedrock_axe"
 		},
-		"bridge_bedrock_pickaxe": {
-			"textures": "textures/items/bedrock_pickaxe"
-		},
-		"bridge_bedrock_sword": {
-			"textures": "textures/items/bedrock_sword"
-		},
-		"bridge_blue_cake": {
-			"textures": "textures/items/blue_cake"
-		},
-		"bridge_bluestone": {
-			"textures": "textures/items/bluestone_dust"
-		},
-		"bridge_blue_apple": {
-			"textures": "textures/items/blue_apple"
-		},
-		"bridge_dream_axe": {
-			"textures": "textures/items/dream_axe"
-		},
-		"bridge_dream_pickaxe": {
-			"textures": "textures/items/dream_pickaxe"
-		},
-		"bridge_dream_sword": {
-			"textures": "textures/items/dream_sword"
-		},
-		"bridge_ruby": {
-			"textures": "textures/items/ruby"
-		},
-		"bridge_unfinished_emerald": {
-			"textures": "textures/items/unfinished_emerald"
-		},
-		"bridge_unfinished_ruby": {
-			"textures": "textures/items/unfinished_ruby"
-		},
-		"bridge_bedrock_hoe": {
-			"textures": "textures/items/bedrock_hoe"
-		},
-		"bridge_bedrock_shovel": {
-			"textures": "textures/items/bedrock_shovel"
-		},
-		"bridge_dream_shovel": {
-			"textures": "textures/items/dream_shovel"
-		},
-		"bridge_dream_hoe": {
-			"textures": "textures/items/dream_hoe"
-		},
-		"bridge_bedrock_helmet": {
-			"textures": "textures/items/bedrock_helmet"
-		},
-		"bridge_bedrock_chestplate": {
-			"textures": "textures/items/bedrock_chestplate"
-		},
-		"bridge_bedrock_leggings": {
-			"textures": "textures/items/bedrock_leggings"
-		},
-		"bridge_bedrock_boots": {
+		"rafapack_bedrock_boots": {
 			"textures": "textures/items/bedrock_boots"
 		},
-		"bridge_teleport_wand_black": {
-			"textures": "textures/items/teleport_wand_black"
+		"rafapack_bedrock_chestplate": {
+			"textures": "textures/items/bedrock_chestplate"
 		},
-		"bridge_teleport_wand_blue": {
-			"textures": "textures/items/teleport_wand_blue"
+		"rafapack_bedrock_helmet": {
+			"textures": "textures/items/bedrock_helmet"
 		},
-		"bridge_teleport_wand_green": {
-			"textures": "textures/items/teleport_wand_green"
+		"rafapack_bedrock_hoe": {
+			"textures": "textures/items/bedrock_hoe"
 		},
-		"bridge_teleport_wand_red": {
-			"textures": "textures/items/teleport_wand_red"
+		"rafapack_bedrock_leggings": {
+			"textures": "textures/items/bedrock_leggings"
 		},
-		"bridge_teleport_wand_white": {
-			"textures": "textures/items/teleport_wand_white"
+		"rafapack_bedrock_pickaxe": {
+			"textures": "textures/items/bedrock_pickaxe"
 		},
-		"bridge_teleport_wand_yellow": {
-			"textures": "textures/items/teleport_wand_yellow"
+		"rafapack_bedrock_shovel": {
+			"textures": "textures/items/bedrock_shovel"
 		},
-		"bridge_teleport_summon_wand_black": {
-			"textures": "textures/items/teleport_summon_wand_black"
+		"rafapack_bedrock_sword": {
+			"textures": "textures/items/bedrock_sword"
 		},
-		"bridge_teleport_summon_wand_blue": {
-			"textures": "textures/items/teleport_summon_wand_blue"
+		"rafapack_blue_apple": {
+			"textures": "textures/items/blue_apple"
 		},
-		"bridge_teleport_summon_wand_green": {
-			"textures": "textures/items/teleport_summon_wand_green"
+		"rafapack_blue_cake": {
+			"textures": "textures/items/blue_cake"
 		},
-		"bridge_teleport_summon_wand_red": {
-			"textures": "textures/items/teleport_summon_wand_red"
+		"rafapack_bluestone": {
+			"textures": "textures/items/bluestone_dust"
 		},
-		"bridge_teleport_summon_wand_white": {
-			"textures": "textures/items/teleport_summon_wand_white"
+		"rafapack_dream_axe": {
+			"textures": "textures/items/dream_axe"
 		},
-		"bridge_teleport_summon_wand_yellow": {
-			"textures": "textures/items/teleport_summon_wand_yellow"
+		"rafapack_dream_hoe": {
+			"textures": "textures/items/dream_hoe"
 		},
-		"bridge_erasure_wand": {
+		"rafapack_dream_pickaxe": {
+			"textures": "textures/items/dream_pickaxe"
+		},
+		"rafapack_dream_shovel": {
+			"textures": "textures/items/dream_shovel"
+		},
+		"rafapack_dream_sword": {
+			"textures": "textures/items/dream_sword"
+		},
+		"rafapack_erasure_wand": {
 			"textures": "textures/items/erasure_wand"
 		},
-		"bridge_lightning_hammer": {
+		"rafapack_lightning_hammer": {
 			"textures": "textures/items/lightning_hammer"
 		},
-		"bridge_sticker01": {
+		"rafapack_ruby": {
+			"textures": "textures/items/ruby"
+		},
+		"rafapack_sticker01": {
 			"textures": "textures/items/sticker01"
 		},
-		"bridge_sticker02": {
+		"rafapack_sticker02": {
 			"textures": "textures/items/sticker02"
 		},
-		"bridge_sticker03": {
+		"rafapack_sticker03": {
 			"textures": "textures/items/sticker03"
 		},
-		"bridge_sticker04": {
+		"rafapack_sticker04": {
 			"textures": "textures/items/sticker04"
 		},
-		"bridge_sticker05": {
+		"rafapack_sticker05": {
 			"textures": "textures/items/sticker05"
 		},
-		"bridge_sticker06": {
+		"rafapack_sticker06": {
 			"textures": "textures/items/sticker06"
 		},
-		"bridge_sticker07": {
+		"rafapack_sticker07": {
 			"textures": "textures/items/sticker07"
 		},
-		"bridge_sticker08": {
+		"rafapack_sticker08": {
 			"textures": "textures/items/sticker08"
 		},
-		"bridge_sticker09": {
+		"rafapack_sticker09": {
 			"textures": "textures/items/sticker09"
 		},
-		"bridge_sticker10": {
+		"rafapack_sticker10": {
 			"textures": "textures/items/sticker10"
+		},
+		"rafapack_teleport_summon_wand_black": {
+			"textures": "textures/items/teleport_summon_wand_black"
+		},
+		"rafapack_teleport_summon_wand_blue": {
+			"textures": "textures/items/teleport_summon_wand_blue"
+		},
+		"rafapack_teleport_summon_wand_green": {
+			"textures": "textures/items/teleport_summon_wand_green"
+		},
+		"rafapack_teleport_summon_wand_red": {
+			"textures": "textures/items/teleport_summon_wand_red"
+		},
+		"rafapack_teleport_summon_wand_white": {
+			"textures": "textures/items/teleport_summon_wand_white"
+		},
+		"rafapack_teleport_summon_wand_yellow": {
+			"textures": "textures/items/teleport_summon_wand_yellow"
+		},
+		"rafapack_teleport_wand_black": {
+			"textures": "textures/items/teleport_wand_black"
+		},
+		"rafapack_teleport_wand_blue": {
+			"textures": "textures/items/teleport_wand_blue"
+		},
+		"rafapack_teleport_wand_green": {
+			"textures": "textures/items/teleport_wand_green"
+		},
+		"rafapack_teleport_wand_red": {
+			"textures": "textures/items/teleport_wand_red"
+		},
+		"rafapack_teleport_wand_white": {
+			"textures": "textures/items/teleport_wand_white"
+		},
+		"rafapack_teleport_wand_yellow": {
+			"textures": "textures/items/teleport_wand_yellow"
+		},
+		"rafapack_unfinished_emerald": {
+			"textures": "textures/items/unfinished_emerald"
+		},
+		"rafapack_unfinished_ruby": {
+			"textures": "textures/items/unfinished_ruby"
 		}
 	}
 }

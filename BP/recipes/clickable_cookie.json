@@ -1,27 +1,27 @@
 {
-  "format_version": "1.12",
-  "minecraft:recipe_shaped": {
-    "description": {
-      "identifier": "bridge:clickable_cookie"
-    },
-    "tags": [
-      "crafting_table"
-    ],
-    "pattern": [
-      "AAA",
-      "ABA",
-      "AAA"
-    ],
-    "key": {
-      "A": {
-        "item": "minecraft:cookie"
-      },
-      "B": {
-        "item": "minecraft:ender_chest"
-      }
-    },
-    "result": {
-      "item": "bridge:clickable_cookie"
-    }
-  }
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "rafapack:clickable_cookie"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AAA",
+			"ABA",
+			"AAA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:cookie"
+			},
+			"B": {
+				"item": "minecraft:ender_chest"
+			}
+		},
+		"result": {
+			"item": "rafapack:clickable_cookie"
+		}
+	}
 }

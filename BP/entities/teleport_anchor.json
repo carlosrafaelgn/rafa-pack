@@ -1,0 +1,111 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "rafapack:teleport_anchor",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"rafapack:color_black": {
+				"minecraft:variant": {"value": 0}
+			},
+			"rafapack:color_blue": {
+				"minecraft:variant": {"value": 1}
+			},
+			"rafapack:color_green": {
+				"minecraft:variant": {"value": 2}
+			},
+			"rafapack:color_red": {
+				"minecraft:variant": {"value": 3}
+			},
+			"rafapack:color_white": {
+				"minecraft:variant": {"value": 4}
+			},
+			"rafapack:color_yellow": {
+				"minecraft:variant": {"value": 5}
+			}
+		},
+		"components": {
+			"minecraft:variant": {
+				"value": 0
+			},
+			"minecraft:type_family": {
+				"family": ["inanimate"]
+			},
+			"minecraft:collision_box": {
+				"width": 0.01,
+				"height": 0.01
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"pivot": [0.5, 0, 0.5],
+						"width": 0.01,
+						"height": 0.01
+					}
+				]
+			},
+			"minecraft:health": {
+				"value": 1,
+				"min": 1,
+				"max": 1
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:tick_world": {
+				"never_despawn": true,
+				"radius": 2
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1.0
+			},
+			"minecraft:nameable": {},
+			"minecraft:persistent": {},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:despawn": {
+				"filters": { "test": "has_tag", "subject": "self", "operator": "equals", "value": "despawn" }
+			}
+		},
+		"events": {
+			"rafapack:event_black": {
+				"add": {
+					"component_groups": ["rafapack:color_black"]
+				}
+			},
+			"rafapack:event_blue": {
+				"add": {
+					"component_groups": ["rafapack:color_blue"]
+				}
+			},
+			"rafapack:event_green": {
+				"add": {
+					"component_groups": ["rafapack:color_green"]
+				}
+			},
+			"rafapack:event_red": {
+				"add": {
+					"component_groups": ["rafapack:color_red"]
+				}
+			},
+			"rafapack:event_white": {
+				"add": {
+					"component_groups": ["rafapack:color_white"]
+				}
+			},
+			"rafapack:event_yellow": {
+				"add": {
+					"component_groups": ["rafapack:color_yellow"]
+				}
+			}
+		}
+	}
+}

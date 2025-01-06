@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:bedrock_leggings"
+			"identifier": "rafapack:bedrock_leggings"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -16,7 +16,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:bedrock_leggings"
+			"item": "rafapack:bedrock_leggings"
 		}
 	}
 }

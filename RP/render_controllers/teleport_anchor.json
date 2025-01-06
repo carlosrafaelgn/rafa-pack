@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.teleport_anchor": {
+			"arrays": {
+				"textures": {
+					"Array.color": [
+						"Texture.black",
+						"Texture.blue",
+						"Texture.green",
+						"Texture.red",
+						"Texture.white",
+						"Texture.yellow"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.color[q.variant]"
+			]
+		}
+	}
+}

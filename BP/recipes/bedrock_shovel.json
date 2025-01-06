@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:bedrock_shovel"
+			"identifier": "rafapack:bedrock_shovel"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -19,7 +19,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:bedrock_shovel"
+			"item": "rafapack:bedrock_shovel"
 		}
 	}
 }

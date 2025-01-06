@@ -1,29 +1,32 @@
 {
 	"type": "minecraftBedrock",
 	"name": "Rafa Pack",
-	"namespace": "bridge",
+	"namespace": "rafapack",
 	"authors": [
 		"Carlos Rafael Gimenes das Neves"
 	],
-	"targetVersion": "1.19.50",
+	"targetVersion": "1.21.50",
 	"description": "Rafa Pack",
 	"experimentalGameplay": {
-		"cavesAndCliffs": true,
-		"holidayCreatorFeatures": true,
-		"creationOfCustomBiomes": true,
-		"additionalModdingCapabilities": false,
+		"creationOfCustomBiomes": false,
 		"upcomingCreatorFeatures": false,
 		"enableGameTestFramework": false,
-		"experimentalMolangFeatures": false,
-		"theWildUpdate": true,
+		"focusTargetCamera": false,
+		"dataDrivenJigsawStructures": false,
+		"aimAssist": false,
 		"educationEdition": false
 	},
+	"bdsProject": false,
 	"packs": {
 		"behaviorPack": "./BP",
 		"resourcePack": "./RP"
 	},
+	"worlds": [
+		"./worlds/*"
+	],
 	"compiler": {
 		"plugins": [
+			"generatorScripts",
 			"typeScript",
 			"entityIdentifierAlias",
 			"customEntityComponents",
@@ -31,13 +34,13 @@
 			"customBlockComponents",
 			"customCommands",
 			"moLang",
+			"formatVersionCorrection",
 			[
 				"simpleRewrite",
 				{
 					"packName": "Rafa Pack"
 				}
-			],
-			"formatVersionCorrection"
+			]
 		]
 	}
 }

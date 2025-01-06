@@ -6,10 +6,10 @@
 		],
 		"generated_with": {
 			"bridge": [
-				"2.5.3"
+				"2.7.42"
 			],
 			"dash": [
-				"0.10.8"
+				"0.11.7"
 			]
 		}
 	},
@@ -17,25 +17,42 @@
 		"name": "Rafa Pack",
 		"description": "Rafa Pack",
 		"min_engine_version": [
-			1,
-			19,
-			50
+			1, 21, 50
 		],
-		"uuid": "f74e7152-95e8-42ea-af7b-0f1714ab1110",
+		"uuid": "8cd3d716-b758-48be-8635-b5d439a0083f",
 		"version": [
-			1,
-			0,
-			41
+			1, 1, 0
 		]
 	},
 	"modules": [
 		{
+			"description": "Rafa Pack - Behavior Pack",
 			"type": "data",
-			"uuid": "66d0a67a-8c71-4b27-8790-3613c24fdedd",
+			"uuid": "cda3c38b-ab75-4faf-85a9-5109dcdedbe2",
 			"version": [
-				1,
-				0,
-				41
+				1, 1, 0
+			]
+		},
+		{
+			"description": "Rafa Pack - Script Resources",
+			"language": "javascript",
+			"type": "script",
+			"uuid": "39c989de-1582-427b-beae-5ee19cbf6371",
+			"version": [
+				1, 1, 0
+			],
+			"entry": "scripts/main.js"
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.16.0"
+		},
+		{
+			"uuid": "576a837c-a73e-48ab-aeb2-680416201a9f",
+			"version": [
+				1, 1, 0
 			]
 		}
 	]

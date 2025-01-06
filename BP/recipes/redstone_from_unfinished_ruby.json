@@ -2,12 +2,12 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bridge:redstone_from_unfinished_ruby"
+			"identifier": "rafapack:redstone_from_unfinished_ruby"
 		},
-        "tags": ["crafting_table"],
+		"tags": ["crafting_table"],
 		"ingredients": [
 			{
-				"item": "bridge:unfinished_ruby"
+				"item": "rafapack:unfinished_ruby"
 			}
 		],
 		"result": {

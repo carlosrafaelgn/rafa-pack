@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:teleport_summon_wand_red"
+			"identifier": "rafapack:teleport_summon_wand_red"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -22,7 +22,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:teleport_summon_wand_red"
+			"item": "rafapack:teleport_summon_wand_red"
 		}
 	}
 }

@@ -6,10 +6,10 @@
 		],
 		"generated_with": {
 			"bridge": [
-				"2.5.3"
+				"2.7.42"
 			],
 			"dash": [
-				"0.10.8"
+				"0.11.7"
 			]
 		}
 	},
@@ -18,24 +18,29 @@
 		"description": "Rafa Pack",
 		"min_engine_version": [
 			1,
-			19,
+			21,
 			50
 		],
-		"uuid": "479eb621-fa27-498a-a53c-742b4374ef0c",
+		"uuid": "576a837c-a73e-48ab-aeb2-680416201a9f",
 		"version": [
-			1,
-			0,
-			41
+			1, 1, 0
 		]
 	},
 	"modules": [
 		{
+			"description": "Rafa Pack - Resource Pack",
 			"type": "resources",
-			"uuid": "99026f26-f9d7-4ef1-bb67-a98c95e428b1",
+			"uuid": "1b89b9fb-38d3-44b0-8f73-b8a755ff27fc",
 			"version": [
-				1,
-				0,
-				41
+				1, 1, 0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "8cd3d716-b758-48be-8635-b5d439a0083f",
+			"version": [
+				1, 1, 0
 			]
 		}
 	]

@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:ruby_surprise"
+			"identifier": "rafapack:ruby_surprise"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -18,14 +18,14 @@
 				"item": "minecraft:copper_block"
 			},
 			"C": {
-				"item": "bridge:ruby"
+				"item": "rafapack:ruby"
 			},
 			"D": {
 				"item": "minecraft:redstone_block"
 			}
 		},
 		"result": {
-			"item": "bridge:ruby_surprise"
+			"item": "rafapack:ruby_surprise"
 		}
 	}
 }

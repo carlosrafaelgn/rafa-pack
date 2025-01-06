@@ -2,10 +2,10 @@
 	"format_version": "1.12",
 	"minecraft:recipe_furnace": {
 		"description": {
-			"identifier": "bridge:bedrock"
+			"identifier": "rafapack:bedrock"
 		},
 		"tags": ["blast_furnace", "furnace"],
-		"input": "bridge:soft_bedrock",
+		"input": "rafapack:soft_bedrock",
 		"output": "minecraft:bedrock"
 	}
 }

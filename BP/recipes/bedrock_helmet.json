@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:bedrock_helmet"
+			"identifier": "rafapack:bedrock_helmet"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -15,7 +15,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:bedrock_helmet"
+			"item": "rafapack:bedrock_helmet"
 		}
 	}
 }

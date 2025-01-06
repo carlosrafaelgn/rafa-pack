@@ -1,17 +1,21 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.40",
 	"minecraft:item": {
 		"description": {
-			"identifier": "bridge:dream_axe",
-			"category": "equipment"
+			"identifier": "rafapack:dream_axe",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.axe"
+			}
 		},
 		"components": {
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.axe"
-			},
+			"minecraft:icon": "rafapack_dream_axe",
+			"minecraft:custom_components": [
+				"rafapack:bedrock_item_behavior"
+			],
 			"minecraft:max_stack_size": 1,
 			"minecraft:hand_equipped": true,
-			"minecraft:foil": true,
+			"minecraft:glint": true,
 			"minecraft:durability": {
 				"max_durability": 999,
 				"damage_chance": {
@@ -19,77 +23,48 @@
 					"max": 0
 				}
 			},
-			"minecraft:icon": {
-				"texture": "bridge_dream_axe"
-			},
 			"minecraft:repairable": {
 				"repair_items": [
 					{
 						"items": [
-							"bridge:dream_axe"
+							"rafapack:dream_axe"
 						],
-						"repair_amount": 20
+						"repair_amount": "context.other->query.remaining_durability + 0.12 * context.other->query.max_durability"
 					}
 				]
 			},
-			"minecraft:mining_speed": 25,
-			"minecraft:damage": 10,
+			"minecraft:damage": {
+				"value": 10
+			},
 			"minecraft:enchantable": {
 				"value": 14,
 				"slot": "axe"
 			},
-			"minecraft:use_on": {
-				"blocks": [
-					"log",
-					"log2",
-					"wood"
-				]
-			},
 			"minecraft:digger": {
-				"on_dig": {
-					"event": "bridge:durability",
-					"target": "self"
-				},
 				"use_efficiency": true,
 				"destroy_speeds": [
-					// @@@ bug 1.19 https://bugs.mojang.com/browse/MCPE-155786
-{
-	"block": { "tags": "query.any_tag('wood', 'pumpkin', 'plant')" },
-	"speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" }
-},
-{
-	"block": { "tags": "query.any_tag('acacia', 'birch', 'dark_oak', 'jungle', 'log', 'oak', 'spruce')" },
-	"speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" }
-},
-
-{ "block": "minecraft:chest", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } },
-{ "block": "minecraft:crafting_table", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } },
-{ "block": "minecraft:melon_block", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } },
-{ "block": "minecraft:pumpkin", "speed": 25, "on_dig": { "event": "bridge:durability", "target": "self" } }
+					{
+						"block": {
+							"tags": "q.any_tag('acacia', 'birch', 'dark_oak', 'jungle', 'log', 'minecraft:crop', 'minecraft:is_axe_item_destructible', 'oak' 'plant', 'pumpkin' 'spruce', 'text_sign', 'trapdoors', 'wood')"
+						},
+						"speed": 25
+					}
+					/*
+					{
+						"block": "minecraft:chest",
+						"speed": 6
+					},
+					{
+						"block": "minecraft:melon_block",
+						"speed": 6
+					}
+					*/
 				]
 			},
-			"minecraft:weapon": {
-				"on_hit_block": {
-					"event": "bridge:durability",
-					"target": "self"
-				},
-				"on_hurt_entity": {
-					"event": "bridge:durability",
-					"target": "self"
-				},
-				"on_not_hurt_entity": {
-					"event": "bridge:durability",
-					"target": "self"
-				}
-			},
-			"tag:minecraft:is_axe": {}
-		},
-		"events": {
-			"bridge:durability": {
-				"damage": {
-					"type": "all",
-					"amount": 0
-				}
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_axe"
+				]
 			}
 		}
 	}

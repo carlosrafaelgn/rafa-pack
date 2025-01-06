@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bridge:sticker_album"
+			"identifier": "rafapack:sticker_album"
 		},
 		"tags": ["crafting_table"],
 		"ingredients": [
@@ -26,7 +26,7 @@
 			}
 		],
 		"result": {
-			"item": "bridge:sticker_album"
+			"item": "rafapack:sticker_album"
 		}
 	}
 }

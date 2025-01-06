@@ -2,9 +2,9 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bridge:lava_bucket"
+			"identifier": "rafapack:lava_bucket"
 		},
-        "tags": ["crafting_table"],
+		"tags": ["crafting_table"],
 		"ingredients": [
 			{
 				"item": "minecraft:lava"

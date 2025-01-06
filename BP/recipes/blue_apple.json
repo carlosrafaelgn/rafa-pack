@@ -2,19 +2,19 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bridge:blue_apple"
+			"identifier": "rafapack:blue_apple"
 		},
 		"tags": ["crafting_table"],
 		"ingredients": [
 			{
-				"item": "bridge:bluestone"
+				"item": "rafapack:bluestone"
 			},
 			{
 				"item": "minecraft:apple"
 			}
 		],
 		"result": {
-			"item": "bridge:blue_apple"
+			"item": "rafapack:blue_apple"
 		}
 	}
 }

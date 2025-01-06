@@ -1,30 +1,45 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "bridge:fake_cobblestone",
-			"category": "items"
+			"identifier": "rafapack:fake_cobblestone",
+			"menu_category": {
+				"category": "items"
+			}
 		},
 		"components": {
-			"tag:stone_pick_diggable": {},
-			"minecraft:creative_category": {
-				"category": "items",
-				"group": "items"
+			"tag:stone": {},
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2,
+				// https://bugs.mojang.com/browse/MCPE-188401
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:diamond_tier')"
+						},
+						"destroy_speed": 1
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:netherite_tier')"
+						},
+						"destroy_speed": 0.5
+					}
+					/*
+					{
+						"item": "minecraft:diamond_pickaxe",
+						"destroy_speed": 1
+					},
+					{
+						"item": "minecraft:netherite_pickaxe",
+						"destroy_speed": 0.5
+					}
+					*/
+				]
 			},
-			"minecraft:unit_cube": {},
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "bridge_fake_cobblestone",
-					"render_method": "double_sided"
-				}
-			},
-			"minecraft:destroy_time": 2,
-			"minecraft:unwalkable": true,
-			"minecraft:entity_collision": false,
-			"minecraft:pick_collision": {
-				"origin": [-8, 0, -8],
-				"size": [16, 16, 16]
-			}
+			"minecraft:flammable": false,
+			"minecraft:collision_box": false
 		}
 	}
 }

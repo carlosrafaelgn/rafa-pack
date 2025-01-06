@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:bedrock_pickaxe"
+			"identifier": "rafapack:bedrock_pickaxe"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -19,7 +19,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:bedrock_pickaxe"
+			"item": "rafapack:bedrock_pickaxe"
 		}
 	}
 }

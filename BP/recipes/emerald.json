@@ -2,10 +2,10 @@
 	"format_version": "1.12",
 	"minecraft:recipe_furnace": {
 		"description": {
-			"identifier": "bridge:emerald"
+			"identifier": "rafapack:emerald"
 		},
 		"tags": ["blast_furnace", "furnace"],
-		"input": "bridge:unfinished_emerald",
+		"input": "rafapack:unfinished_emerald",
 		"output": "minecraft:emerald"
 	}
 }

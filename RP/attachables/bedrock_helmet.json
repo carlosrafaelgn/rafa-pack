@@ -1,8 +1,8 @@
 {
-	"format_version": "1.8.0",
+	"format_version": "1.20.80",
 	"minecraft:attachable": {
 		"description": {
-			"identifier": "bridge:bedrock_helmet",
+			"identifier": "rafapack:bedrock_helmet",
 			"materials": {
 				"default": "armor",
 				"enchanted": "armor_enchanted"

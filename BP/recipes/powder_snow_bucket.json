@@ -2,9 +2,9 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bridge:powder_snow_bucket"
+			"identifier": "rafapack:powder_snow_bucket"
 		},
-        "tags": ["crafting_table"],
+		"tags": ["crafting_table"],
 		"ingredients": [
 			{
 				"item": "minecraft:powder_snow"

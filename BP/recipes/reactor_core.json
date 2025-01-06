@@ -2,24 +2,27 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:reactor_core"
+			"identifier": "rafapack:reactor_core"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
 			"ABA",
-			"ABA",
+			"ACA",
 			"ABA"
 		],
 		"key": {
 			"A": {
-				"item": "minecraft:iron_ingot"
+				"item": "minecraft:diamond"
 			},
 			"B": {
-				"item": "minecraft:diamond"
+				"item": "minecraft:iron_ingot"
+			},
+			"C": {
+				"item": "minecraft:redstone_block"
 			}
 		},
 		"result": {
-			"item": "bridge:reactor_core"
+			"item": "rafapack:reactor_core"
 		}
 	}
 }

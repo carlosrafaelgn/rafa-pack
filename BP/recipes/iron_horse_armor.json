@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:iron_horse_armor"
+			"identifier": "rafapack:iron_horse_armor"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [

@@ -1,164 +1,137 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "bridge:pepper_bomb",
-			"category": "items",
-			"properties": {
-				// https://wiki.bedrock.dev/blocks/rotatable-blocks.html
-				"bridge:rotation": [0, 1, 2, 3, 4, 5, 6],
-				"bridge:count": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+			"identifier": "rafapack:pepper_bomb",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"rafapack:count": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+			},
+			"traits": {
+				// https://wiki.bedrock.dev/blocks/block-traits.html
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:block_face"
+					]
+				}
 			}
 		},
 		"components": {
-			"minecraft:creative_category": {
-				"category": "items",
-				"group": "items"
-			},
+			"tag:stone": {},
 			"minecraft:geometry": "geometry.pepper_bomb",
 			"minecraft:material_instances": {
-				// https://wiki.bedrock.dev/blocks/troubleshooting-blocks.html#_3-2-0-block-has-shadow
 				"*": {
-					"texture": "bridge_pepper_bomb",
+					"texture": "rafapack_pepper_bomb",
 					"render_method": "opaque"
 				}
 			},
-			"minecraft:block_light_emission": 0.0,
-			"minecraft:block_light_absorption": 0,
-			"minecraft:destroy_time": 1,
-			"minecraft:flammable": {
-				"flame_odds": 5,
-				"burn_odds": 20
+			"minecraft:custom_components": [
+				"rafapack:pepper_bomb_behavior"
+			],
+			"minecraft:light_emission": 0,
+			"minecraft:light_dampening": 0,
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
 			},
-			"minecraft:entity_collision": false,
-			"minecraft:pick_collision": {
-				"origin": [-8, 1, -5],
-				"size": [1, 14, 10]
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
+			},
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [-5, 1, -8],
+				"size": [10, 14, 1]
 			},
 			"minecraft:placement_filter": {
 				"conditions": [
 					{
-						"allowed_faces": ["north", "south", "west", "east"]
+						"allowed_faces": [
+							"north", "south", "west", "east"
+						]
 					}
 				]
 			},
-			"minecraft:on_player_placing": {
-				"event": "bridge:set_rotation"
-			},
-			"minecraft:on_interact": {
-				// https://wiki.bedrock.dev/documentation/queries.html#query-get-equiped-item-name
-				// https://wiki.bedrock.dev/documentation/queries.html#query-is-item-name-any
-				//"condition": "query.get_equipped_item_name == 'flint_and_steel' && query.block_property('bridge:count') == 0",
-				"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:flint_and_steel') && query.block_property('bridge:count') == 0",
-				"event": "bridge:tick"
+			"minecraft:tick": {
+				// https://wiki.bedrock.dev/blocks/block-components.html#tick
+				"interval_range": [80, 80],
+				"looping": true
 			}
 		},
 		"permutations": [
 			{
-				"condition": "query.block_property('bridge:rotation') == 2",
+				"condition": "q.block_state('minecraft:block_face') == 'north'",
 				"components": {
-					"minecraft:rotation": [0, 270, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 180, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:rotation') == 3",
+				"condition": "q.block_state('minecraft:block_face') == 'south'",
 				"components": {
-					"minecraft:rotation": [0, 90, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 0, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:rotation') == 4",
+				"condition": "q.block_state('minecraft:block_face') == 'west'",
 				"components": {
-					"minecraft:rotation": [0, 0, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 270, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:rotation') == 5",
+				"condition": "q.block_state('minecraft:block_face') == 'east'",
 				"components": {
-					"minecraft:rotation": [0, 180, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 90, 0]
+					}
 				}
 			},
 			{
-				"condition": "math.mod(query.block_property('bridge:count'), 2) != 0",
+				"condition": "math.mod(q.block_state('rafapack:count'), 2) != 0",
 				"components": {
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "bridge_white",
+							"texture": "rafapack_white",
 							"render_method": "opaque"
 						}
 					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:count') > 0 && query.block_property('bridge:count') < 8",
+				"condition": "q.block_state('rafapack:count') > 0 && q.block_state('rafapack:count') < 8",
 				"components": {
-					"minecraft:block_light_emission": 1.0,
-					"minecraft:ticking": {
-						"looping": true,
-						"range": [1, 1],
-						"on_tick": {
-							"event": "bridge:tick"
-						}
+					"minecraft:light_emission": 15,
+					"minecraft:tick": {
+						// https://wiki.bedrock.dev/blocks/block-components.html#tick
+						"interval_range": [10, 10],
+						"looping": true
 					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:count') == 8",
+				"condition": "q.block_state('rafapack:count') == 8",
 				"components": {
-					"minecraft:block_light_emission": 1.0,
 					"minecraft:material_instances": {
 						"*": {
-							"texture": "bridge_red",
+							"texture": "rafapack_red",
 							"render_method": "opaque"
 						}
 					},
-					"minecraft:ticking": {
-						"looping": true,
-						"range": [2, 2],
-						"on_tick": {
-							"event": "bridge:final_tick"
-						}
+					"minecraft:light_emission": 15,
+					"minecraft:tick": {
+						// https://wiki.bedrock.dev/blocks/block-components.html#tick
+						"interval_range": [10, 10],
+						"looping": true
 					}
 				}
 			}
-		],
-		"events": {
-			"bridge:set_rotation": {
-				"set_block_property": {
-					// query.block_face	Returns the block face for this (only valid for certain triggers such
-					// as placing blocks, or interacting with block)
-					// (Down=0.0, Up=1.0, North=2.0, South=3.0, West=4.0, East=5.0, Undefined=6.0).
-					"bridge:rotation": "(query.block_face)"
-				}
-			},
-			"bridge:tick": {
-				"set_block_property": {
-					"bridge:count": "query.block_property('bridge:count') + 1"
-				}
-			},
-			"bridge:final_tick": {
-				"run_command": {
-					"command": [
-						"damage @e[r=5] 10 block_explosion",
-
-						"setblock ~ ~ ~ air",
-
-						"fill ~-5 ~-5 ~-5 ~5 ~5 ~5 air 0 destroy",
-
-						"particle minecraft:huge_explosion_emitter ~-1 ~ ~-1",
-						"particle minecraft:huge_explosion_emitter ~-1 ~ ~",
-						"particle minecraft:huge_explosion_emitter ~-1 ~ ~1",
-						"particle minecraft:huge_explosion_emitter ~ ~ ~-1",
-						"particle minecraft:huge_explosion_emitter ~ ~ ~",
-						"particle minecraft:huge_explosion_emitter ~ ~ ~1",
-						"particle minecraft:huge_explosion_emitter ~1 ~ ~-1",
-						"particle minecraft:huge_explosion_emitter ~1 ~ ~",
-						"particle minecraft:huge_explosion_emitter ~1 ~ ~1",
-
-						"playsound random.explode @a ~ ~ ~ 1 1 1"
-					]
-				}
-			}
-		}
+		]
 	}
 }

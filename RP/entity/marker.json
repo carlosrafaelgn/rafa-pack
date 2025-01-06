@@ -1,16 +1,16 @@
 {
-	"format_version": "1.10.0",
+	"format_version": "1.21.40",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "bridge:teleport_anchor_red",
+			"identifier": "rafapack:marker",
 			"materials": {
 				"default": "entity_alphatest"
 			},
 			"textures": {
-				"default": "textures/entity/teleport_anchor_entity_red"
+				"default": "textures/entity/marker"
 			},
 			"geometry": {
-				"default": "geometry.teleport_anchor"
+				"default": "geometry.marker"
 			},
 			"render_controllers": [
 				"controller.render.generic"

@@ -1,61 +1,47 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "bridge:disc_maker",
-			"category": "items"
+			"identifier": "rafapack:disc_maker",
+			"menu_category": {
+				"category": "items"
+			}
 		},
 		"components": {
 			"tag:metal": {},
-			"minecraft:creative_category": {
-				"category": "items",
-				"group": "items"
+			"minecraft:custom_components": [
+				"rafapack:disc_maker_behavior"
+			],
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2,
+				// https://bugs.mojang.com/browse/MCPE-188401
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:diamond_tier')"
+						},
+						"destroy_speed": 1
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:netherite_tier')"
+						},
+						"destroy_speed": 0.5
+					}
+					/*
+					{
+						"item": "minecraft:diamond_pickaxe",
+						"destroy_speed": 1
+					},
+					{
+						"item": "minecraft:netherite_pickaxe",
+						"destroy_speed": 0.5
+					}
+					*/
+				]
 			},
-			"minecraft:unit_cube": {},
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "bridge_disc_maker_side",
-					"render_method": "opaque"
-				},
-				"up": {
-					"texture": "bridge_disc_maker_top",
-					"render_method": "opaque"
-				}
-			},
-			"minecraft:destroy_time": 1,
-			"minecraft:flammable": {
-				"flame_odds": 0,
-				"burn_odds": 0
-			},
-			"minecraft:map_color": "#181818",
-			"minecraft:entity_collision": {
-				"origin": [-8, 0, -8],
-				"size": [16, 16, 16]
-			},
-			"minecraft:pick_collision": {
-				"origin": [-8, 0, -8],
-				"size": [16, 16, 16]
-			},
-			"minecraft:on_interact": {
-				// https://wiki.bedrock.dev/documentation/queries.html#query-get-equiped-item-name
-				// https://wiki.bedrock.dev/documentation/queries.html#query-is-item-name-any
-				//"condition": "query.get_equipped_item_name == 'coal'",
-				"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:coal')",
-				"event": "bridge:generate"
-			}
-		},
-		"events": {
-			// @@@ BUG!!!
-			// Item event response 'run_command' with '/clear' or '/replaceitem' does not change held item
-			// https://bugs.mojang.com/browse/MCPE-163988
-			"bridge:generate": {
-				"spawn_loot": {
-					"table": "loot_tables/disc_maker.json"
-				},
-				"run_command": {
-					"command": "clear @p[c=1] minecraft:coal 0 1"
-				}
-			}
+			"minecraft:flammable": false
 		}
 	}
 }

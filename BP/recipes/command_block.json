@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:command_block"
+			"identifier": "rafapack:command_block"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [

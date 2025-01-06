@@ -1,17 +1,20 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.40",
 	"minecraft:item": {
 		"description": {
-			"identifier": "bridge:bedrock_hoe",
-			"category": "equipment"
+			"identifier": "rafapack:bedrock_hoe",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.hoe"
+			}
 		},
 		"components": {
-			"minecraft:creative_category": {
-				"parent": "itemGroup.name.hoe"
-			},
+			"minecraft:icon": "rafapack_bedrock_hoe",
+			"minecraft:custom_components": [
+				"rafapack:bedrock_item_behavior"
+			],
 			"minecraft:max_stack_size": 1,
 			"minecraft:hand_equipped": true,
-			"minecraft:foil": true,
 			"minecraft:durability": {
 				"max_durability": 999,
 				"damage_chance": {
@@ -19,54 +22,27 @@
 					"max": 0
 				}
 			},
-			"minecraft:icon": {
-				"texture": "bridge_bedrock_hoe"
-			},
 			"minecraft:repairable": {
 				"repair_items": [
 					{
 						"items": [
-							"bridge:bedrock_hoe"
+							"rafapack:bedrock_hoe"
 						],
-						"repair_amount": 20
+						"repair_amount": "context.other->query.remaining_durability + 0.12 * context.other->query.max_durability"
 					}
 				]
 			},
-			"minecraft:mining_speed": 25,
-			"minecraft:damage": 10,
+			"minecraft:damage": {
+				"value": 10
+			},
 			"minecraft:enchantable": {
 				"value": 14,
 				"slot": "hoe"
 			},
-			"minecraft:use_on": {
-				"blocks": [
-					"grass",
-					"dirt",
-					"grass_path"
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_hoe"
 				]
-			},
-			"minecraft:weapon": {
-				"on_hit_block": {
-					"event": "bridge:durability",
-					"target": "self"
-				},
-				"on_hurt_entity": {
-					"event": "bridge:durability",
-					"target": "self"
-				},
-				"on_not_hurt_entity": {
-					"event": "bridge:durability",
-					"target": "self"
-				}
-			},
-			"tag:minecraft:is_hoe": {}
-		},
-		"events": {
-			"bridge:durability": {
-				"damage": {
-					"type": "all",
-					"amount": 0
-				}
 			}
 		}
 	}

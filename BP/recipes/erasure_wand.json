@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:erasure_wand"
+			"identifier": "rafapack:erasure_wand"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -15,14 +15,14 @@
 				"item": "minecraft:lava"
 			},
 			"B": {
-				"item": "bridge:ruby"
+				"item": "rafapack:ruby"
 			},
 			"C": {
 				"item": "minecraft:iron_ingot"
 			}
 		},
 		"result": {
-			"item": "bridge:erasure_wand"
+			"item": "rafapack:erasure_wand"
 		}
 	}
 }

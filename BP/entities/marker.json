@@ -1,8 +1,8 @@
 {
-	"format_version": "1.16.0",
+	"format_version": "1.21.40",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "bridge:marker",
+			"identifier": "rafapack:marker",
 			"is_spawnable": false,
 			"is_summonable": true,
 			"is_experimental": false
@@ -10,7 +10,7 @@
 		"component_groups": {},
 		"components": {
 			"minecraft:type_family": {
-				"family": [ "inanimate" ]
+				"family": ["inanimate"]
 			},
 			"minecraft:collision_box": {
 				"width": 0.01,
@@ -34,22 +34,21 @@
 			"minecraft:knockback_resistance": {
 				"value": 1.0
 			},
-			"minecraft:nameable": {
-			},
-			"minecraft:persistent": {
-			},
+			"minecraft:nameable": {},
+			"minecraft:persistent": {},
 			"minecraft:physics": {
-				"has_gravity": false
+				"has_gravity": false,
+				"has_collision": false
 			},
 			"minecraft:pushable": {
 				"is_pushable": false,
 				"is_pushable_by_piston": false
 			},
-			"minecraft:conditional_bandwidth_optimization": {
-			},
+			"minecraft:conditional_bandwidth_optimization": {},
 			"minecraft:despawn": {
 				"filters": { "test": "has_tag", "subject": "self", "operator": "equals", "value": "despawn" }
 			}
-		}
+		},
+		"events": {}
 	}
 }

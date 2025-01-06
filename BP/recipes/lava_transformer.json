@@ -2,17 +2,17 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:lava_transformer"
+			"identifier": "rafapack:lava_transformer"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
-			"A",
-			"B",
-			"C"
+			"AAA",
+			"ABA",
+			"ACA"
 		],
 		"key": {
 			"A": {
-				"item": "bridge:bluestone"
+				"item": "rafapack:bluestone"
 			},
 			"B": {
 				"item": "minecraft:sponge"
@@ -22,7 +22,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:lava_transformer"
+			"item": "rafapack:lava_transformer"
 		}
 	}
 }

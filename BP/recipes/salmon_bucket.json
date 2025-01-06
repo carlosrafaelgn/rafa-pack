@@ -2,9 +2,9 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bridge:salmon_bucket"
+			"identifier": "rafapack:salmon_bucket"
 		},
-        "tags": ["crafting_table"],
+		"tags": ["crafting_table"],
 		"ingredients": [
 			{
 				"item": "minecraft:salmon_spawn_egg"

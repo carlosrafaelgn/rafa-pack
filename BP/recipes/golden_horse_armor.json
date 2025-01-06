@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:golden_horse_armor"
+			"identifier": "rafapack:golden_horse_armor"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [

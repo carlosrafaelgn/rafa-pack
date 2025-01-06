@@ -1,11 +1,56 @@
 {
-	"bridge:rocks": {
+	"format_version": "1.21.40",
+	"rafapack:clickable_cookie": {
+		"sound": "dirt_with_roots"
+	},
+	"rafapack:disc_maker": {
+		"sound": "metal",
+		"textures": {
+			"up": "rafapack_disc_maker_top",
+			"side": "rafapack_disc_maker_side",
+			"down": "rafapack_disc_maker_side"
+		}
+	},
+	"rafapack:fake_cobblestone": {
+		"sound": "stone",
+		"textures": "rafapack_fake_cobblestone"
+	},
+	"rafapack:fake_dirt": {
+		"sound": "dirt_with_roots",
+		"textures": "rafapack_fake_dirt"
+	},
+	"rafapack:fake_stone": {
+		"sound": "stone",
+		"textures": "rafapack_fake_stone"
+	},
+	"rafapack:lava_transformer": {
 		"sound": "stone"
 	},
-	"bridge:sticker_album": {
+	"rafapack:pepper_bomb": {
+		"sound": "dirt_with_roots"
+	},
+	"rafapack:reactor_core": {
+		"sound": "metal"
+	},
+	"rafapack:rocks": {
 		"sound": "stone"
 	},
-	"bridge:pepper_bomb": {
-		"sound": "stone"
+	"rafapack:ruby_surprise": {
+		"sound": "stone",
+		"textures": {
+			"up": "rafapack_ruby_surprise_top",
+			"side": "rafapack_ruby_surprise_side",
+			"down": "rafapack_ruby_surprise_top"
+		}
+	},
+	"rafapack:soft_bedrock": {
+		"sound": "stone",
+		"textures": "rafapack_soft_bedrock"
+	},
+	"rafapack:sticker_album": {
+		"sound": "grass"
+	},
+	"rafapack:sticker_pack": {
+		"sound": "grass"
 	}
 }

@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:lightning_hammer"
+			"identifier": "rafapack:lightning_hammer"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -22,7 +22,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:lightning_hammer"
+			"item": "rafapack:lightning_hammer"
 		}
 	}
 }

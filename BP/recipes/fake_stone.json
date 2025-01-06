@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:fake_stone"
+			"identifier": "rafapack:fake_stone"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -21,7 +21,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:fake_stone",
+			"item": "rafapack:fake_stone",
 			"count": 16
 		}
 	}

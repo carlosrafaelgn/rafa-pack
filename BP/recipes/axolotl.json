@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:axolotl"
+			"identifier": "rafapack:axolotl"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [

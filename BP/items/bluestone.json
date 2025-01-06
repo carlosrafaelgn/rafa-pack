@@ -1,17 +1,14 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.40",
 	"minecraft:item": {
 		"description": {
-			"identifier": "bridge:bluestone",
-			"category": "items"
+			"identifier": "rafapack:bluestone",
+			"menu_category": {
+				"category": "items"
+			}
 		},
 		"components": {
-			"minecraft:creative_category": {
-				"parent": "items"
-			},
-			"minecraft:icon": {
-				"texture": "bridge_bluestone"
-			}
+			"minecraft:icon": "rafapack_bluestone"
 		}
 	}
 }

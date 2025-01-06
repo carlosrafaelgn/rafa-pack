@@ -1,86 +1,83 @@
 {
+	"num_mip_levels": 4,
+	"padding": 8,
 	"resource_pack_name": "Rafa Pack",
 	"texture_name": "atlas.terrain",
-	"num_mip_levels": 0,
-	"padding": 0,
 	"texture_data": {
-		"bridge_reactor_core_0": {
-			"textures": "textures/blocks/reactor_core_0"
+		"rafapack_clickable_cookie": {
+			"textures": "textures/blocks/clickable_cookie"
 		},
-		"bridge_reactor_core_1": {
-			"textures": "textures/blocks/reactor_core_1"
-		},
-		"bridge_reactor_core_2": {
-			"textures": "textures/blocks/reactor_core_2"
-		},
-		"bridge_reactor_core_3": {
-			"textures": "textures/blocks/reactor_core_3"
-		},
-		"bridge_ruby_surprise_side": {
-			"textures": "textures/blocks/ruby_surprise_side"
-		},
-		"bridge_ruby_surprise_top": {
-			"textures": "textures/blocks/ruby_surprise_top"
-		},
-		"bridge_soft_bedrock": {
-			"textures": "textures/blocks/soft_bedrock"
-		},
-		"bridge_ruby_ore": {
-			"textures": "textures/blocks/ruby_ore"
-		},
-		"bridge_disc_maker_side": {
+		"rafapack_disc_maker_side": {
 			"textures": "textures/blocks/disc_maker_side"
 		},
-		"bridge_disc_maker_top": {
+		"rafapack_disc_maker_top": {
 			"textures": "textures/blocks/disc_maker_top"
 		},
-		"bridge_lava_transformer_0": {
-			"textures": "textures/blocks/lava_transformer_0"
-		},
-		"bridge_lava_transformer_1": {
-			"textures": "textures/blocks/lava_transformer_1"
-		},
-		"bridge_lava_transformer_2": {
-			"textures": "textures/blocks/lava_transformer_2"
-		},
-		"bridge_lava_transformer_3": {
-			"textures": "textures/blocks/lava_transformer_3"
-		},
-		"bridge_lava_transformer_4": {
-			"textures": "textures/blocks/lava_transformer_4"
-		},
-		"bridge_rocks": {
-			"textures": "textures/blocks/rocks"
-		},
-		"bridge_sticker_album": {
-			"textures": "textures/blocks/sticker_album"
-		},
-		"bridge_sticker_album_golden": {
-			"textures": "textures/blocks/sticker_album_golden"
-		},
-		"bridge_sticker_pack": {
-			"textures": "textures/blocks/sticker_pack"
-		},
-		"bridge_fake_cobblestone": {
+		"rafapack_fake_cobblestone": {
 			"textures": "textures/blocks/fake_cobblestone"
 		},
-		"bridge_fake_dirt": {
+		"rafapack_fake_dirt": {
 			"textures": "textures/blocks/fake_dirt"
 		},
-		"bridge_fake_stone": {
+		"rafapack_fake_stone": {
 			"textures": "textures/blocks/fake_stone"
 		},
-		"bridge_pepper_bomb": {
+		"rafapack_lava_transformer_0": {
+			"textures": "textures/blocks/lava_transformer_0"
+		},
+		"rafapack_lava_transformer_1": {
+			"textures": "textures/blocks/lava_transformer_1"
+		},
+		"rafapack_lava_transformer_2": {
+			"textures": "textures/blocks/lava_transformer_2"
+		},
+		"rafapack_lava_transformer_3": {
+			"textures": "textures/blocks/lava_transformer_3"
+		},
+		"rafapack_lava_transformer_4": {
+			"textures": "textures/blocks/lava_transformer_4"
+		},
+		"rafapack_pepper_bomb": {
 			"textures": "textures/blocks/pepper_bomb"
 		},
-		"bridge_white": {
-			"textures": "textures/blocks/white"
+		"rafapack_reactor_core_0": {
+			"textures": "textures/blocks/reactor_core_0"
 		},
-		"bridge_red": {
+		"rafapack_reactor_core_1": {
+			"textures": "textures/blocks/reactor_core_1"
+		},
+		"rafapack_reactor_core_2": {
+			"textures": "textures/blocks/reactor_core_2"
+		},
+		"rafapack_reactor_core_3": {
+			"textures": "textures/blocks/reactor_core_3"
+		},
+		"rafapack_red": {
 			"textures": "textures/blocks/red"
 		},
-		"bridge_clickable_cookie": {
-			"textures": "textures/blocks/clickable_cookie"
+		"rafapack_rocks": {
+			"textures": "textures/blocks/rocks"
+		},
+		"rafapack_ruby_surprise_side": {
+			"textures": "textures/blocks/ruby_surprise_side"
+		},
+		"rafapack_ruby_surprise_top": {
+			"textures": "textures/blocks/ruby_surprise_top"
+		},
+		"rafapack_soft_bedrock": {
+			"textures": "textures/blocks/soft_bedrock"
+		},
+		"rafapack_sticker_album": {
+			"textures": "textures/blocks/sticker_album"
+		},
+		"rafapack_sticker_album_golden": {
+			"textures": "textures/blocks/sticker_album_golden"
+		},
+		"rafapack_sticker_pack": {
+			"textures": "textures/blocks/sticker_pack"
+		},
+		"rafapack_white": {
+			"textures": "textures/blocks/white"
 		}
 	}
 }

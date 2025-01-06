@@ -2,7 +2,7 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "bridge:generic_smoke",
+			"identifier": "rafapack:generic_smoke",
 			"basic_render_parameters": {
 				"material": "particles_alpha",
 				"texture": "textures/particle/particles"

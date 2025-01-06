@@ -1,53 +1,51 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "bridge:ruby_surprise",
-			"category": "items"
+			"identifier": "rafapack:ruby_surprise",
+			"menu_category": {
+				"category": "items"
+			}
 		},
 		"components": {
-			"tag:metal": {},
-			"minecraft:creative_category": {
-				"category": "items",
-				"group": "items"
+			"tag:diamond_pick_diggable": {},
+			"minecraft:custom_components": [
+				"rafapack:ruby_surprise_behavior"
+			],
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 5,
+				// https://bugs.mojang.com/browse/MCPE-188401
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:diamond_tier')"
+						},
+						"destroy_speed": 3
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:netherite_tier')"
+						},
+						"destroy_speed": 2
+					}
+					/*
+					{
+						"item": "minecraft:diamond_pickaxe",
+						"destroy_speed": 3
+					},
+					{
+						"item": "minecraft:netherite_pickaxe",
+						"destroy_speed": 2
+					}
+					*/
+				]
 			},
-			"minecraft:unit_cube": {},
-			"minecraft:material_instances": {
-				"*": {
-					"texture": "bridge_ruby_surprise_side",
-					"render_method": "opaque"
-				},
-				"up": {
-					"texture": "bridge_ruby_surprise_top",
-					"render_method": "opaque"
-				},
-				"down": {
-					"texture": "bridge_ruby_surprise_top",
-					"render_method": "opaque"
-				}
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
 			},
-			"minecraft:destroy_time": 5,
-			"minecraft:explosion_resistance": 5,
-			"minecraft:entity_collision": {
-				"origin": [-8, 0, -8],
-				"size": [16, 16, 16]
-			},
-			"minecraft:pick_collision": {
-				"origin": [-8, 0, -8],
-				"size": [16, 16, 16]
-			},
-			"minecraft:loot": "loot_tables/ruby_surprise.json",
-			"minecraft:on_player_destroyed": {
-				"event": "bridge:destroyed",
-				"target": "self"
-			}
-		},
-		"events": {
-			"bridge:destroyed": {
-				"set_block": {
-					"block_type": "bridge:ruby_surprise"
-				}
-			}
+			"minecraft:loot": "loot_tables/ruby_surprise.json"
 		}
 	}
 }

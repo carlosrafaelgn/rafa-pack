@@ -5,7 +5,7 @@
 			"entries": [
 				{
 					"type": "item",
-					"name": "minecraft:iron_ingot",
+					"name": "minecraft:diamond",
 					"functions": [
 						{
 							"function": "set_count",
@@ -23,16 +23,25 @@
 			"entries": [
 				{
 					"type": "item",
-					"name": "minecraft:diamond",
+					"name": "minecraft:iron_ingot",
 					"functions": [
 						{
 							"function": "set_count",
 							"count": {
-								"min": 3,
-								"max": 3
+								"min": 2,
+								"max": 2
 							}
 						}
 					]
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:redstone_block"
 				}
 			]
 		}

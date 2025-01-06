@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:teleport_wand_blue_from_lapis"
+			"identifier": "rafapack:teleport_wand_blue_from_lapis"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -22,7 +22,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:teleport_wand_blue"
+			"item": "rafapack:teleport_wand_blue"
 		}
 	}
 }

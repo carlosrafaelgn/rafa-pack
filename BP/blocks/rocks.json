@@ -1,83 +1,86 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "bridge:rocks",
-			"category": "nature",
-			"properties": {
-				// https://wiki.bedrock.dev/blocks/rotatable-blocks.html
-				"bridge:rotation": [2, 3, 4, 5]
+			"identifier": "rafapack:rocks",
+			"menu_category": {
+				"category": "items"
+			},
+			"traits": {
+				// https://wiki.bedrock.dev/blocks/block-traits.html
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
 			}
 		},
 		"components": {
-			"minecraft:creative_category": {
-				"category": "nature",
-				"group": "nature"
-			},
+			"tag:stone": {},
 			"minecraft:geometry": "geometry.rocks",
 			"minecraft:material_instances": {
 				// https://wiki.bedrock.dev/blocks/troubleshooting-blocks.html#_3-2-0-block-has-shadow
 				"*": {
-					"texture": "bridge_rocks",
+					"texture": "rafapack_rocks",
 					"render_method": "opaque"
 				}
 			},
-			"minecraft:block_light_emission": 0.0,
-			"minecraft:block_light_absorption": 0,
-			"minecraft:destroy_time": 0.2,
-			"minecraft:flammable": {
-				"flame_odds": 0,
-				"burn_odds": 0
+			"minecraft:light_emission": 0,
+			"minecraft:light_dampening": 0,
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.2
 			},
-			"minecraft:entity_collision": false,
-			"minecraft:pick_collision": {
+			"minecraft:flammable": false,
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
 				"origin": [-8, 0, -8],
 				"size": [16, 10, 16]
 			},
 			"minecraft:placement_filter": {
 				"conditions": [
 					{
-						"allowed_faces": ["up"]
+						"allowed_faces": [
+							"up"
+						]
 					}
 				]
 			},
-			"minecraft:loot": "loot_tables/rocks.json",
-			"minecraft:on_player_placing": {
-				"event": "bridge:set_rotation"
-			}
+			"minecraft:loot": "loot_tables/rocks.json"
 		},
 		"permutations": [
 			{
-				"condition": "query.block_property('bridge:rotation') == 2",
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north'",
 				"components": {
-					"minecraft:rotation": [0, 0, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 0, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:rotation') == 3",
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south'",
 				"components": {
-					"minecraft:rotation": [0, 180, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 180, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:rotation') == 4",
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west'",
 				"components": {
-					"minecraft:rotation": [0, 90, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 90, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:rotation') == 5",
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east'",
 				"components": {
-					"minecraft:rotation": [0, 270, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 270, 0]
+					}
 				}
 			}
-		],
-		"events": {
-			"bridge:set_rotation": {
-				"set_block_property": {
-					"bridge:rotation": "(query.cardinal_facing_2d)"
-				}
-			}
-		}
+		]
 	}
 }

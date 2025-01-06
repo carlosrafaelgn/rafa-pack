@@ -1,451 +1,153 @@
 {
-	"format_version": "1.16.100",
+	"format_version": "1.21.50",
 	"minecraft:block": {
 		"description": {
-			"identifier": "bridge:sticker_album",
-			"category": "items",
-			"properties": {
-				// https://wiki.bedrock.dev/blocks/rotatable-blocks.html
-				"bridge:rotation": [0, 1, 2, 3, 4, 5, 6],
-				"bridge:vertical": [0, 1],
-				"bridge:current_sticker": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+			"identifier": "rafapack:sticker_album",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"rafapack:nibble0": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+				"rafapack:nibble1": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+				"rafapack:nibble2": [0, 1, 2, 3]
+			},
+			"traits": {
+				// https://wiki.bedrock.dev/blocks/block-traits.html
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				},
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:block_face"
+					]
+				}
 			}
 		},
 		"components": {
-			"minecraft:creative_category": {
-				"category": "items",
-				"group": "items"
-			},
+			"tag:grass": {},
 			"minecraft:geometry": "geometry.sticker_album",
 			"minecraft:material_instances": {
 				// https://wiki.bedrock.dev/blocks/troubleshooting-blocks.html#_3-2-0-block-has-shadow
 				"*": {
-					"texture": "bridge_sticker_album",
+					"texture": "rafapack_sticker_album",
 					"render_method": "opaque"
 				}
 			},
-			"minecraft:block_light_emission": 0.0,
-			"minecraft:block_light_absorption": 0,
-			"minecraft:destroy_time": 0.2,
-			"minecraft:flammable": {
-				"flame_odds": 5,
-				"burn_odds": 20
+			"minecraft:custom_components": [
+				"rafapack:sticker_album_behavior"
+			],
+			"minecraft:light_emission": 0,
+			"minecraft:light_dampening": 0,
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.2
 			},
-			"minecraft:entity_collision": false,
-			"minecraft:pick_collision": {
+			"minecraft:flammable": {
+				"catch_chance_modifier": 5,
+				"destroy_chance_modifier": 20
+			},
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
 				"origin": [-6, 0, -7],
 				"size": [12, 1, 14]
 			},
 			"minecraft:placement_filter": {
 				"conditions": [
 					{
-						"allowed_faces": ["up", "north", "south", "west", "east"]
+						"allowed_faces": [
+							"up", "north", "south", "west", "east"
+						]
 					}
 				]
-			},
-			"minecraft:on_player_placing": {
-				"event": "bridge:set_rotation"
-			},
-			"minecraft:loot": "loot_tables/sticker_album_00.json",
-			"minecraft:on_interact": {
-				"event": "bridge:place_sticker_00"
 			}
 		},
 		"permutations": [
+			// Horizontal
+
 			{
-				"condition": "query.block_property('bridge:vertical') == 0 && query.block_property('bridge:rotation') == 2",
+				"condition": "q.block_state('minecraft:block_face') == 'up' && q.block_state('minecraft:cardinal_direction') == 'north'",
 				"components": {
-					"minecraft:rotation": [0, 0, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 0, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:vertical') == 0 && query.block_property('bridge:rotation') == 3",
+				"condition": "q.block_state('minecraft:block_face') == 'up' && q.block_state('minecraft:cardinal_direction') == 'south'",
 				"components": {
-					"minecraft:rotation": [0, 180, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 180, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:vertical') == 0 && query.block_property('bridge:rotation') == 4",
+				"condition": "q.block_state('minecraft:block_face') == 'up' && q.block_state('minecraft:cardinal_direction') == 'west'",
 				"components": {
-					"minecraft:rotation": [0, 90, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 90, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:vertical') == 0 && query.block_property('bridge:rotation') == 5",
+				"condition": "q.block_state('minecraft:block_face') == 'up' && q.block_state('minecraft:cardinal_direction') == 'east'",
 				"components": {
-					"minecraft:rotation": [0, 270, 0]
+					"minecraft:transformation": {
+						"rotation": [0, 270, 0]
+					}
 				}
 			},
 
 			// Vertical
 
 			{
-				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 2",
+				"condition": "q.block_state('minecraft:block_face') == 'north'",
 				"components": {
-					"minecraft:rotation": [90, 180, 0]
+					"minecraft:transformation": {
+						"rotation": [90, 180, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 3",
+				"condition": "q.block_state('minecraft:block_face') == 'south'",
 				"components": {
-					"minecraft:rotation": [90, 0, 0]
+					"minecraft:transformation": {
+						"rotation": [90, 0, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 4",
+				"condition": "q.block_state('minecraft:block_face') == 'west'",
 				"components": {
-					"minecraft:rotation": [90, -90, 0]
+					"minecraft:transformation": {
+						"rotation": [90, -90, 0]
+					}
 				}
 			},
 			{
-				"condition": "query.block_property('bridge:vertical') == 1 && query.block_property('bridge:rotation') == 5",
+				"condition": "q.block_state('minecraft:block_face') == 'east'",
 				"components": {
-					"minecraft:rotation": [90, 90, 0]
+					"minecraft:transformation": {
+						"rotation": [90, 90, 0]
+					}
 				}
 			},
 
-			// Current Sticker
+			// Album Complete
 
 			{
-				"condition": "query.block_property('bridge:current_sticker') == 1",
-				"components": {
-					"minecraft:loot": "loot_tables/sticker_album_01.json",
-					"minecraft:on_interact": {
-						"event": "bridge:place_sticker_01"
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('bridge:current_sticker') == 2",
-				"components": {
-					"minecraft:loot": "loot_tables/sticker_album_02.json",
-					"minecraft:on_interact": {
-						"event": "bridge:place_sticker_02"
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('bridge:current_sticker') == 3",
-				"components": {
-					"minecraft:loot": "loot_tables/sticker_album_03.json",
-					"minecraft:on_interact": {
-						"event": "bridge:place_sticker_03"
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('bridge:current_sticker') == 4",
-				"components": {
-					"minecraft:loot": "loot_tables/sticker_album_04.json",
-					"minecraft:on_interact": {
-						"event": "bridge:place_sticker_04"
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('bridge:current_sticker') == 5",
-				"components": {
-					"minecraft:loot": "loot_tables/sticker_album_05.json",
-					"minecraft:on_interact": {
-						"event": "bridge:place_sticker_05"
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('bridge:current_sticker') == 6",
-				"components": {
-					"minecraft:loot": "loot_tables/sticker_album_06.json",
-					"minecraft:on_interact": {
-						"event": "bridge:place_sticker_06"
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('bridge:current_sticker') == 7",
-				"components": {
-					"minecraft:loot": "loot_tables/sticker_album_07.json",
-					"minecraft:on_interact": {
-						"event": "bridge:place_sticker_07"
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('bridge:current_sticker') == 8",
-				"components": {
-					"minecraft:loot": "loot_tables/sticker_album_08.json",
-					"minecraft:on_interact": {
-						"event": "bridge:place_sticker_08"
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('bridge:current_sticker') == 9",
-				"components": {
-					"minecraft:loot": "loot_tables/sticker_album_09.json",
-					"minecraft:on_interact": {
-						"event": "bridge:place_sticker_09"
-					}
-				}
-			},
-			{
-				"condition": "query.block_property('bridge:current_sticker') == 10",
+				"condition": "q.block_state('rafapack:nibble0') == 15 && q.block_state('rafapack:nibble1') == 15 && q.block_state('rafapack:nibble2') == 3",
 				"components": {
 					"minecraft:material_instances": {
-						// https://wiki.bedrock.dev/blocks/troubleshooting-blocks.html#_3-2-0-block-has-shadow
 						"*": {
-							"texture": "bridge_sticker_album_golden",
+							"texture": "rafapack_sticker_album_golden",
 							"render_method": "opaque"
 						}
 					},
-					"minecraft:block_light_emission": 1.0,
-					"minecraft:loot": "loot_tables/sticker_album_10.json",
-					"minecraft:on_interact": {
-						"event": "bridge:place_sticker_10"
-					}
+					"minecraft:light_emission": 15
 				}
 			}
-
-		],
-		"events": {
-			"bridge:set_rotation": {
-				"set_block_property": {
-					// query.block_face	Returns the block face for this (only valid for certain triggers such
-					// as placing blocks, or interacting with block)
-					// (Down=0.0, Up=1.0, North=2.0, South=3.0, West=4.0, East=5.0, Undefined=6.0).
-					// query.cardinal_facing_2d	Returns the current facing of the player ignoring up/down part
-					// of the direction (North=2.0, South=3.0, West=4.0, East=5.0, Undefined=6.0).
-					"bridge:rotation": "(query.block_face == 1 ? query.cardinal_facing_2d : query.block_face)",
-					"bridge:vertical": "(query.block_face == 1 ? 0 : 1)"
-				}
-			},
-			// @@@ BUG!!!
-			// Item event response 'run_command' with '/clear' or '/replaceitem' does not change held item
-			// https://bugs.mojang.com/browse/MCPE-163988
-			"bridge:place_sticker_00": {
-				"sequence": [
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker01') == 0",
-						"run_command": {
-							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.place_sticker_01\"}]}"
-						}
-					},
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker01')",
-						"set_block_property": {
-							"bridge:current_sticker": "query.block_property('bridge:current_sticker') + 1"
-						},
-						"run_command": {
-							"command": [
-								"clear @p[c=1] bridge:sticker01 0 1",
-								"tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.sticker_ok\"}]}"
-							]
-						}
-					}
-				]
-			},
-			"bridge:place_sticker_01": {
-				"sequence": [
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker02') == 0",
-						"run_command": {
-							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.place_sticker_02\"}]}"
-						}
-					},
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker02')",
-						"set_block_property": {
-							"bridge:current_sticker": "query.block_property('bridge:current_sticker') + 1"
-						},
-						"run_command": {
-							"command": [
-								"clear @p[c=1] bridge:sticker02 0 1",
-								"tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.sticker_ok\"}]}"
-							]
-						}
-					}
-				]
-			},
-			"bridge:place_sticker_02": {
-				"sequence": [
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker03') == 0",
-						"run_command": {
-							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.place_sticker_03\"}]}"
-						}
-					},
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker03')",
-						"set_block_property": {
-							"bridge:current_sticker": "query.block_property('bridge:current_sticker') + 1"
-						},
-						"run_command": {
-							"command": [
-								"clear @p[c=1] bridge:sticker03 0 1",
-								"tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.sticker_ok\"}]}"
-							]
-						}
-					}
-				]
-			},
-			"bridge:place_sticker_03": {
-				"sequence": [
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker04') == 0",
-						"run_command": {
-							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.place_sticker_04\"}]}"
-						}
-					},
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker04')",
-						"set_block_property": {
-							"bridge:current_sticker": "query.block_property('bridge:current_sticker') + 1"
-						},
-						"run_command": {
-							"command": [
-								"clear @p[c=1] bridge:sticker04 0 1",
-								"tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.sticker_ok\"}]}"
-							]
-						}
-					}
-				]
-			},
-			"bridge:place_sticker_04": {
-				"sequence": [
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker05') == 0",
-						"run_command": {
-							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.place_sticker_05\"}]}"
-						}
-					},
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker05')",
-						"set_block_property": {
-							"bridge:current_sticker": "query.block_property('bridge:current_sticker') + 1"
-						},
-						"run_command": {
-							"command": [
-								"clear @p[c=1] bridge:sticker05 0 1",
-								"tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.sticker_ok\"}]}"
-							]
-						}
-					}
-				]
-			},
-			"bridge:place_sticker_05": {
-				"sequence": [
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker06') == 0",
-						"run_command": {
-							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.place_sticker_06\"}]}"
-						}
-					},
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker06')",
-						"set_block_property": {
-							"bridge:current_sticker": "query.block_property('bridge:current_sticker') + 1"
-						},
-						"run_command": {
-							"command": [
-								"clear @p[c=1] bridge:sticker06 0 1",
-								"tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.sticker_ok\"}]}"
-							]
-						}
-					}
-				]
-			},
-			"bridge:place_sticker_06": {
-				"sequence": [
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker07') == 0",
-						"run_command": {
-							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.place_sticker_07\"}]}"
-						}
-					},
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker07')",
-						"set_block_property": {
-							"bridge:current_sticker": "query.block_property('bridge:current_sticker') + 1"
-						},
-						"run_command": {
-							"command": [
-								"clear @p[c=1] bridge:sticker07 0 1",
-								"tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.sticker_ok\"}]}"
-							]
-						}
-					}
-				]
-			},
-			"bridge:place_sticker_07": {
-				"sequence": [
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker08') == 0",
-						"run_command": {
-							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.place_sticker_08\"}]}"
-						}
-					},
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker08')",
-						"set_block_property": {
-							"bridge:current_sticker": "query.block_property('bridge:current_sticker') + 1"
-						},
-						"run_command": {
-							"command": [
-								"clear @p[c=1] bridge:sticker08 0 1",
-								"tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.sticker_ok\"}]}"
-							]
-						}
-					}
-				]
-			},
-			"bridge:place_sticker_08": {
-				"sequence": [
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker09') == 0",
-						"run_command": {
-							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.place_sticker_09\"}]}"
-						}
-					},
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker09')",
-						"set_block_property": {
-							"bridge:current_sticker": "query.block_property('bridge:current_sticker') + 1"
-						},
-						"run_command": {
-							"command": [
-								"clear @p[c=1] bridge:sticker09 0 1",
-								"tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.sticker_ok\"}]}"
-							]
-						}
-					}
-				]
-			},
-			"bridge:place_sticker_09": {
-				"sequence": [
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker10') == 0",
-						"run_command": {
-							"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.place_sticker_10\"}]}"
-						}
-					},
-					{
-						"condition": "query.is_item_name_any('slot.weapon.mainhand', 0, 'bridge:sticker10')",
-						"set_block_property": {
-							"bridge:current_sticker": "query.block_property('bridge:current_sticker') + 1"
-						},
-						"run_command": {
-							"command": [
-								"clear @p[c=1] bridge:sticker10 0 1",
-								"tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.album_complete\"}]}"
-							]
-						}
-					}
-				]
-			},
-			"bridge:place_sticker_10": {
-				"run_command": {
-					"command": "tellraw @p[c=1] {\"rawtext\":[{\"translate\": \"sticker_album.album_complete\"}]}"
-				}
-			}
-		}
+		]
 	}
 }

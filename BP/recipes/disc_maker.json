@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:disc_maker"
+			"identifier": "rafapack:disc_maker"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -22,7 +22,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:disc_maker"
+			"item": "rafapack:disc_maker"
 		}
 	}
 }

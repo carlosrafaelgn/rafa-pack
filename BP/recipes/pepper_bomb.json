@@ -2,9 +2,9 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bridge:pepper_bomb"
+			"identifier": "rafapack:pepper_bomb"
 		},
-        "tags": ["crafting_table"],
+		"tags": ["crafting_table"],
 		"ingredients": [
 			{
 				"item": "minecraft:paper"
@@ -17,7 +17,7 @@
 			}
 		],
 		"result": {
-			"item": "bridge:pepper_bomb"
+			"item": "rafapack:pepper_bomb"
 		}
 	}
 }

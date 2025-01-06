@@ -3,19 +3,7 @@
 		{
 			"rolls": 1,
 			"entries": [
-				{ "type": "item", "name": "bridge:sticker_album" }
-			]
-		},
-		{
-			"rolls": 1,
-			"entries": [
-				{ "type": "item", "name": "bridge:sticker01" }
-			]
-		},
-		{
-			"rolls": 1,
-			"entries": [
-				{ "type": "item", "name": "bridge:sticker02" }
+				{ "type": "item", "name": "rafapack:sticker02" }
 			]
 		}
 	]

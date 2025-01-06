@@ -3,16 +3,16 @@
 		{
 			"rolls": 3,
 			"entries": [
-				{ "type": "item", "name": "bridge:sticker01", "weight": 1 },
-				{ "type": "item", "name": "bridge:sticker02", "weight": 1 }, 
-				{ "type": "item", "name": "bridge:sticker03", "weight": 5 },
-				{ "type": "item", "name": "bridge:sticker04", "weight": 5 },
-				{ "type": "item", "name": "bridge:sticker05", "weight": 5 },
-				{ "type": "item", "name": "bridge:sticker06", "weight": 7 },
-				{ "type": "item", "name": "bridge:sticker07", "weight": 8 },
-				{ "type": "item", "name": "bridge:sticker08", "weight": 8 }, 
-				{ "type": "item", "name": "bridge:sticker09", "weight": 8 },
-				{ "type": "item", "name": "bridge:sticker10", "weight": 1 }
+				{ "type": "item", "name": "rafapack:sticker01", "weight": 1 },
+				{ "type": "item", "name": "rafapack:sticker02", "weight": 1 }, 
+				{ "type": "item", "name": "rafapack:sticker03", "weight": 5 },
+				{ "type": "item", "name": "rafapack:sticker04", "weight": 5 },
+				{ "type": "item", "name": "rafapack:sticker05", "weight": 5 },
+				{ "type": "item", "name": "rafapack:sticker06", "weight": 7 },
+				{ "type": "item", "name": "rafapack:sticker07", "weight": 8 },
+				{ "type": "item", "name": "rafapack:sticker08", "weight": 8 }, 
+				{ "type": "item", "name": "rafapack:sticker09", "weight": 8 },
+				{ "type": "item", "name": "rafapack:sticker10", "weight": 1 }
 			]
 		}
 	]

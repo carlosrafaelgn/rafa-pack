@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:powder_snow"
+			"identifier": "rafapack:powder_snow"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [

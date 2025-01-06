@@ -165,13 +165,14 @@ Therefore, I thought it would be a great idea to create the `Nether Reactor Core
 Crafting table:
 
 ABA
-ABA
+ACA
 ABA
 
 Where:
 
-A = Iron Ingot
-B = Diamond
+A = Diamond
+B = Iron Ingot
+C = Redtone Block
 ```
 
 Once activated by a `Diamond`, the block will produce 8 random items (one at a time) before turning black/purple, and then completely black. If mined before turning completely black, it is possible to obtain all the items used to craft a new `Nether Reactor Core Light`. If mined when completely black, 9 `Coal`s will be produced. If not mined at all, the block explodes after some time it has turned completely black! 😅
@@ -255,14 +256,14 @@ The `Pepper Bomb` is a block that after placed and activated by `Flint and Steel
 
 ## Lava Transformer
 
-When placed next to a lava pool and activated by a `Diamond`, the `Lava Transformer` will transform into `Block of Diamond` all lava within a range of 1, 2 and 3 blocks (in turns).
+When placed next to a lava pool the `Lava Transformer` will transform into `Block of Diamond` all lava within a range of 1, 2 and 3 blocks (in turns). Mine it before the fourth turn or else you will not be able to reuse it.
 
 ```
 Crafting table:
 
-A
-B
-C
+AAA
+ABA
+ACA
 
 Where:
 
@@ -373,6 +374,9 @@ In my case, I found these specific links to be very helpful:
 - https://bedrock.dev/docs/stable/Features#Feature%20rules
 - https://bedrock.dev/docs/1.18.0.0/1.18.30.32/Features#minecraft%3Aore_feature
 
+- https://github.com/JaylyDev/ScriptAPI
+- https://github.com/microsoft/minecraft-scripting-samples
+
 - https://learn.microsoft.com/en-us/minecraft/creator/documents/experimentalfeaturestoggle
 - https://learn.microsoft.com/en-us/minecraft/creator/documents/introductiontoloottables
 - https://learn.microsoft.com/en-us/minecraft/creator/documents/introductiontoaddentity
@@ -387,6 +391,16 @@ In my case, I found these specific links to be very helpful:
 - https://learn.microsoft.com/en-us/minecraft/creator/reference/source/vanillabehaviorpack_snippets/entities/armor_stand
 - https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entitycomponents/minecraftcomponent_conditional_bandwidth_optimization
 - https://learn.microsoft.com/en-us/minecraft/creator/reference/content/entityreference/examples/entityproperties/minecraftproperty_type_family
+- https://learn.microsoft.com/en-us/minecraft/creator/commands/commands/loot?view=minecraft-bedrock-stable
+- https://learn.microsoft.com/en-us/minecraft/creator/documents/customcomponents?view=minecraft-bedrock-stable
+- https://learn.microsoft.com/en-us/minecraft/creator/documents/customcomponentstutorial?view=minecraft-bedrock-stable
+- https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptinggettingstarted?view=minecraft-bedrock-stable
+- https://learn.microsoft.com/en-us/minecraft/creator/documents/scriptversioning?view=minecraft-bedrock-stable
+- https://learn.microsoft.com/en-us/minecraft/creator/reference/content/recipereference/examples/recipedefinitions/recipetaglist?view=minecraft-bedrock-stable
+- https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/entityequippablecomponent?view=minecraft-bedrock-stable
+- https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/itemcomponentregistry?view=minecraft-bedrock-stable#registercustomcomponent
+- https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/itemcustomcomponent?view=minecraft-bedrock-stable
+- https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/player?view=minecraft-bedrock-stable
 
 - https://minecraft.fandom.com/wiki/Effect
 - https://minecraft.fandom.com/wiki/Health_Boost
@@ -423,6 +437,11 @@ In my case, I found these specific links to be very helpful:
 - https://wiki.bedrock.dev/visuals/remove-shadows.html
 - https://wiki.bedrock.dev/commands/nbt-commands.html
 - https://wiki.bedrock.dev/documentation/queries.html#query-is-item-name-any
+- https://wiki.bedrock.dev/entities/render-controllers#dynamically-changing-texture
+- https://wiki.bedrock.dev/items/item-events
+- https://wiki.bedrock.dev/items/item-event-migration
+- https://wiki.bedrock.dev/scripting/resources.html
+- https://wiki.bedrock.dev/concepts/text-and-translations
 
 ## Tools and IDE's
 

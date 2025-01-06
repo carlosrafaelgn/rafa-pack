@@ -1,0 +1,25 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "rafapack:teleport_anchor",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"black": "textures/entity/teleport_anchor_entity_black",
+				"blue": "textures/entity/teleport_anchor_entity_blue",
+				"green": "textures/entity/teleport_anchor_entity_green",
+				"red": "textures/entity/teleport_anchor_entity_red",
+				"white": "textures/entity/teleport_anchor_entity_white",
+				"yellow": "textures/entity/teleport_anchor_entity_yellow"
+			},
+			"geometry": {
+				"default": "geometry.teleport_anchor"
+			},
+			"render_controllers": [
+				"controller.render.teleport_anchor"
+			]
+		}
+	}
+}

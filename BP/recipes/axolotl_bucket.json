@@ -2,9 +2,9 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bridge:axolotl_bucket"
+			"identifier": "rafapack:axolotl_bucket"
 		},
-        "tags": ["crafting_table"],
+		"tags": ["crafting_table"],
 		"ingredients": [
 			{
 				"item": "minecraft:axolotl_spawn_egg"

@@ -2,7 +2,7 @@
 	"format_version": "1.12",
 	"minecraft:recipe_shaped": {
 		"description": {
-			"identifier": "bridge:fake_dirt"
+			"identifier": "rafapack:fake_dirt"
 		},
 		"tags": ["crafting_table"],
 		"pattern": [
@@ -21,7 +21,7 @@
 			}
 		},
 		"result": {
-			"item": "bridge:fake_dirt",
+			"item": "rafapack:fake_dirt",
 			"count": 16
 		}
 	}

@@ -1,0 +1,26 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "rafapack:sticker01",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/items/sticker01",
+				"enchanted": "textures/items/sticker01"
+			},
+			"geometry": {
+				"default": "geometry.large_item"
+			},
+			"animations": {
+				"hold": "animation.large_item.hold"
+			},
+			"scripts": {
+				"animate": ["hold"]
+			},
+			"render_controllers": ["controller.render.generic"]
+		}
+	}
+}
